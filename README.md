@@ -9,7 +9,6 @@
   <a href="https://github.com/Squad5-Form22/Orange-Juice/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Squad5-Form22/Orange-Juice.svg">
   </a>
-
   <a href="https://github.com/Squad5-Form22/Orange-Juice/issues">
     <img alt="Repository issues" src="https://img.shields.io/github/issues/Squad5-Form22/Orange-Juice.svg">
   </a>
