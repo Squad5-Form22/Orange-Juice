@@ -1,42 +1,48 @@
-# Squad 5 - Programa de Formação 2022
+<h1 align="center">Squad 5 - Programa de Formação 2022 - Grupo FCamara</i> </p>
 
-<br>
+<p align="center">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Squad5-Form22/Orange-Juice.svg">
+
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Squad5-Form22/Orange-Juice.svg">
+
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Squad5-Form22/Orange-Juice.svg">
+  <a href="https://github.com/Squad5-Form22/Orange-Juice/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Squad5-Form22/Orange-Juice.svg">
+  </a>
+
+  <a href="https://github.com/Squad5-Form22/Orange-Juice/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/Squad5-Form22/Orange-Juice.svg">
+  </a>
+</p>
+
 
 ## Tópicos
-
-[Descrição do Projeto](#descrição-do-projeto)
-
-[Ferramentas utilizadas na construção do projeto](#ferramentas-utilizadas-na-construção-do-projeto)
-
-[Como executar o projeto](#como-executar-o-projeto)
-
-[Como executar o projeto](#como-executar-o-projeto)
-
-[Contribuidores](#contribuidores)
+* [Descrição do Projeto](#descrição-do-projeto)
+* [Ferramentas e Tecnologias](#ferramentas-e-tecnologias)
+* [Como executar o projeto](#como-executar)
+* [Contribuidores](#contribuidores)
 
 <br>
 
-## :memo: Descrição do Projeto
+## Descrição do Projeto
 
 Esse projeto está sendo desenvolvido durante o Programa de Formação 2022 do [Grupo FCamara](https://www.fcamara.com.br/). O objetivo do projeto é desenvolver uma plataforma própria do [Orange Evolution](https://digital.fcamara.com.br/orange-evolution), onde as pessoas possam ter acesso de forma mais organizada a trilha que escolheu, podem ver sua evolução conforme consome os conteúdos, e sendo tudo num mesmo lugar.
 
 <br>
 
-## :wrench: Ferramentas utilizadas na construção do projeto
+## Ferramentas e Tecnologias
 
-* HTML
-* CSS
-* Bootstrap
-* Laravel 9.x
-* MySQL
-* Insomnia 
-* Git 
-* Github
-* Docker
-
-## :rocket: Como executar o projeto
+* [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+* [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+* [Bootstrap](https://getbootstrap.com/)
+* [Laravel 9.x](https://laravel.com/)
+* [MySQL](https://www.mysql.com/)
+* [Git](https://git-scm.com/) 
+* [Docker](https://www.docker.com/)
 
 <br>
+
+## Como executar
 
 #### Pré-requisitos
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas: [Docker](https://www.docker.com/).
@@ -89,7 +95,7 @@ Se tudo estiver correto, a aplicação estará rodando em:
 
 <br>
 
-## :computer: Contribuidores
+## Contribuidores
 
 [Cristiano Albino](https://github.com/Kriss-Albius)
 
