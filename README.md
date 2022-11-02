@@ -26,7 +26,7 @@
 
 ## Descrição do Projeto
 
-Esse projeto está sendo desenvolvido durante o Programa de Formação 2022 do [Grupo FCamara](https://www.fcamara.com.br/). O objetivo do projeto é desenvolver uma plataforma própria do [Orange Evolution](https://digital.fcamara.com.br/orange-evolution), onde as pessoas possam ter acesso de forma mais organizada a trilha que escolheu, podem ver sua evolução conforme consome os conteúdos, e sendo tudo num mesmo lugar.
+Projeto em desenvolvimento durante o Programa de Formação 2022 do [Grupo FCamara](https://www.fcamara.com.br/). O objetivo do projeto é desenvolver uma plataforma própria do [Orange Evolution](https://digital.fcamara.com.br/orange-evolution), onde as pessoas possam ter acesso de forma mais organizada a trilha que escolheu, podem ver sua evolução conforme consome os conteúdos, e sendo tudo num mesmo lugar.
 
 <br>
 
@@ -71,6 +71,8 @@ No container, instale as dependência
 
 ```composer update```
 
+  >Caso o Git em seu computador esteja configurado para SSH, deve-se [cadastrar um token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) para realizar o update
+
 Na pasta app/ renomeie o arquivo .env.example para .env
 
 Dentro da pasta app/, no .env, atualize as seguintes variáveis para os dados abaixo:
@@ -88,7 +90,7 @@ Após isto, volte para dentro do container Docker e rode as migrations para adic
 
 ```php artisan key:generate```
 
-```php artisan ```
+```php artisan migrate```
 
 Se tudo estiver correto, a aplicação estará rodando em:
 ```http://localhost:8000```
