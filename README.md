@@ -71,6 +71,8 @@ No container, instale as dependência
 
 ```composer update```
 
+  >Caso o Git em seu computador esteja configurado para SSH, deve-se [cadastrar um token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) para realizar o update
+
 Na pasta app/ renomeie o arquivo .env.example para .env
 
 Dentro da pasta app/, no .env, atualize as seguintes variáveis para os dados abaixo:
