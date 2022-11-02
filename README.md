@@ -26,7 +26,7 @@
 
 ## Descrição do Projeto
 
-Esse projeto está sendo desenvolvido durante o Programa de Formação 2022 do [Grupo FCamara](https://www.fcamara.com.br/). O objetivo do projeto é desenvolver uma plataforma própria do [Orange Evolution](https://digital.fcamara.com.br/orange-evolution), onde as pessoas possam ter acesso de forma mais organizada a trilha que escolheu, podem ver sua evolução conforme consome os conteúdos, e sendo tudo num mesmo lugar.
+Projeto em desenvolvimento durante o Programa de Formação 2022 do [Grupo FCamara](https://www.fcamara.com.br/). O objetivo do projeto é desenvolver uma plataforma própria do [Orange Evolution](https://digital.fcamara.com.br/orange-evolution), onde as pessoas possam ter acesso de forma mais organizada a trilha que escolheu, podem ver sua evolução conforme consome os conteúdos, e sendo tudo num mesmo lugar.
 
 <br>
 
@@ -88,7 +88,7 @@ Após isto, volte para dentro do container Docker e rode as migrations para adic
 
 ```php artisan key:generate```
 
-```php artisan ```
+```php artisan migrate```
 
 Se tudo estiver correto, a aplicação estará rodando em:
 ```http://localhost:8000```
