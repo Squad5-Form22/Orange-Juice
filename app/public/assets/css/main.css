@@ -2,4 +2,42 @@
 
 /*Estilos Gerais*/
 
+/* cores do projeto */
+:root{
+
+    --first-color: #fff;
+    --second-color: gray;
+    --thirty-color: #000;
+
+}
+ul { padding:0; margin:0 }
+li {list-style: none;}
+a:hover{ text-decoration: none;}
+
 /*Estilos Especificos*/
+
+/* barra de navegação */
+.main-navbar {
+    padding: 0.5rem;
+    background-color: #f8f9fa;
+}
+.main-navbar-wrapper,
+.menu-content {
+    display: flex;
+    align-items: center;
+}
+.main-navbar-wrapper {
+    justify-content: space-between;
+}
+.menu-content li:not(:last-child) {
+    padding-right: 0.5rem;
+
+}
+
+/*area de registro*/
+.register-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

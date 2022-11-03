@@ -1,12 +1,8 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
-    {{--links e navbar da aplicação --}}
+{{-- <html lang="{{ str_replace('_', '-', app()->getLocale()) }}"> --}}
+<html lang="pt-br">
+    
     @include('layouts/header')
-
     @yield('conteudo')
-
-    {{-- scripts e footer da aplicação --}}
-    @include('layouts/footer')
 
 </html>

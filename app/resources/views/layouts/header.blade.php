@@ -9,5 +9,6 @@
     <link href="/assets/css/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    {{-- navbar da aplicação --}}
-    @include('layouts/navbar')
+
+
+
