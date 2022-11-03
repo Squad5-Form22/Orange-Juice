@@ -20,15 +20,21 @@ class loginController extends Controller
         ]);
 
         if (Auth::attempt($dados)) {
-            $request->session()->regenerate();
-            return redirect()->intended('dashboard');
+            if (Auth::user()->status === 1 && Auth::user()->role ==='admin') {
+                $request->session()->regenerate();
+                return redirect()->intended('admin');
+            } else if (Auth::user()->status === 1 && Auth::user()->role === 'common'){
+                $request->session()->regenerate();
+                return redirect()->intended('dashboard');
+            } else {
+                return redirect()->route('/')->with(['message' => 'Usuário inválido']);
+            }
         }
 
         return back()->withErrors([
             'email' => 'O email e/ou senha não são inválidos'
         ]);
     }
-
 
     public function logout(Request $request) 
     {
