@@ -92,6 +92,10 @@ Após isto, volte para dentro do container Docker e rode as migrations para adic
 
 ```php artisan migrate```
 
+Para limpar as migrations, rode:
+
+```php artisan migrate:rollback```
+
 Se tudo estiver correto, a aplicação estará rodando em:
 ```http://localhost:8000```
 

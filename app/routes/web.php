@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\loginController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,22 +15,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/* -- página de registro -- */
-Route::get('/', function() {
-    return view('register');
+
+Route::get('/', function () {
+    return view('landing_page');
 });
 
-/* -- página de login -- */
-Route::get('/login', function() {
-    return view('login');
+Route::group(['middleware' => 'auth', 'isAdmin'], function () {
+    Route::get('/admin/dashboard', function () {
+        return view('dashboard')->name('dashboard');
+    });
+    Route::get('/dashboard', function () {
+        return view('dashboard')->name('dashboard');
+    });
+    Route::post('/logout', [loginController::class, 'logout'])->name('logout');
 });
 
-/* -- página inicial de adm -- */
-Route::get('/dashboard', function() {
-    return view('dashboard');
+Route::middleware(['auth', 'isAdmin'])->group(function () {
+    Route::get('/admin', function () {
+      return view('admin.dashboard');
+    })->name('dashboard');
 });
 
-/*-- página inicial -- */
-Route::get('/user', function() {
-    return view('user');
+Route::group(['middleware' => 'guest'], function () {
+    Route::get('/register', [RegisterController::class, 'create']);
+    Route::post('/register', [RegisterController::class, 'store'])->name('register');
+    Route::post('/login', [loginController::class, 'signin'])->name('login');
+    Route::get('/login', [loginController::class, 'login'])->name('login.form');
 });
