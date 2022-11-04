@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @extends('layouts/layout')
 
 {{-- conteúdo principal da página --}}
@@ -11,9 +10,3 @@
     </div>
 
 @endsection
-=======
-@extends('layout')
-<div class="container">
-  <h1>Dashboard</h1>
-</div>
->>>>>>> 0ce7e3aa3886c7f127d4fa159d251de3e0ca15ae
