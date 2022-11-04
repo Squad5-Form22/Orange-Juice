@@ -1,65 +1,51 @@
 @extends('layouts/layout')
 
 @section('conteudo')
+
     <div class="register-wrapper">
         <div class="container">
             <div class="row no-gutters justify-content-center">
-                <div class="col-7 border">
+                <div class="col-11 col-md-10 col-lg-6">
                     <div class="title-wrapper mb-3">
                         <h1 class="text-center">Orange Evolution</h1>
                         <h3 class="text-center">A comunidade tech mais vitaminada!</h3>
                     </div>
-                </div>
-                <div class="col-7 border">
-                    <div class="form-register-wrapper my-4">
-                        <form>
+                    <div class="form-register-wrapper">
+                        <form id="register-form" method="POST">
+                            @csrf
                             <div class="row no-gutters">
-                                <div class="col-12">
+                                <div class="col-12 col-md-12">
                                     <div class="m-1">
-                                        <div class="form-group mb-0">
-                                            <input type="text" id="" class="form-control" data-name="" name="" placeholder="Nome completo">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" data-name="Nome" name="name"  value="{{ old('name') }}"  placeholder="Nome completo">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-8">
+                                <div class="col-12 col-md-7">
                                     <div class="m-1">
-                                        <div class="form-group mb-0">
-                                            <input type="text" id="" class="form-control" data-name="" name="" placeholder="Cidade">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" data-name="E-mail" name="email" value="{{ old('email') }}" placeholder="E-mail">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-12 col-md-5">
                                     <div class="m-1">
-                                        <div class="form-group mb-0">
-                                            <input type="text" id="" class="form-control" data-name="" name="" placeholder="Estado">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" data-name="Telefone" name="phone" value="{{ old('phone') }}" placeholder="Telefone">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-7">
+                                <div class="col-12 col-md-6">
                                     <div class="m-1">
-                                        <div class="form-group mb-0">
-                                            <input type="email" id="" class="form-control" data-name="" name="" placeholder="E-mail">
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" data-name="Senha" name="password" value="{{ old('password') }}" placeholder="Crie sua Senha">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-5">
+                                <div class="col-12 col-md-6">
                                     <div class="m-1">
-                                        <div class="form-group mb-0">
-                                            <input type="text" id="" class="form-control" data-name="" name="" placeholder="Telefone/WhatsApp">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="m-1">
-                                        <div class="form-group mb-0">
-                                            <input type="text" id="" class="form-control" data-name="" name="" placeholder="Crie sua Senha">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="m-1">
-                                        <div class="form-group mb-0">
-                                            <input type="text" id="" class="form-control" data-name="" name="" placeholder="Confirme sua Senha">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" data-name="Cofirmação de Senha" name="password_confirm" value="{{ old('password_confirm') }}" placeholder="Confirme sua Senha">
                                         </div>
                                     </div>
                                 </div>
@@ -75,4 +61,5 @@
             </div>
         </div>
     </div>
+
 @endsection

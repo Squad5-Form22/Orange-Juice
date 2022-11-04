@@ -1,8 +1,5 @@
 @extends('layouts/layout')
 
-{{-- navbar --}}
-@include('layouts/navbar')
-
 {{-- conteúdo principal da página --}}
 @section('conteudo')
 
@@ -12,5 +9,4 @@
         </div>
     </div>
 
-    @include('layouts/footer')
 @endsection

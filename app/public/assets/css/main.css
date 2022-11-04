@@ -1,22 +1,25 @@
-/* Programa de foramção - Novembro 2022 */
+/* Programa de foramção - Novembro 2022 
+- Marcus Mazza e Cristiano Albino */
 
-/*Estilos Gerais*/
+/* ---------------------- ESTILOS GERAIS*/
 
-/* cores do projeto */
 :root{
-
     --first-color: #fff;
     --second-color: gray;
     --thirty-color: #000;
-
 }
+
+* { font-family: 'Open Sans', sans-serif; }
 ul { padding:0; margin:0 }
 li {list-style: none;}
 a:hover{ text-decoration: none;}
+.form-group { margin:0; }
+.form-control { font-weight: 300; font-size: 0.9rem;}
+.form-control:focus { box-shadow: none;}
 
-/*Estilos Especificos*/
+/* ---------------------- ESTILOS ESPECÍFICOS*/
 
-/* barra de navegação */
+/* ------------- barra de navegação */
 .main-navbar {
     padding: 0.5rem;
     background-color: #f8f9fa;
@@ -31,7 +34,6 @@ a:hover{ text-decoration: none;}
 }
 .menu-content li:not(:last-child) {
     padding-right: 0.5rem;
-
 }
 
 /*area de registro*/
@@ -41,3 +43,15 @@ a:hover{ text-decoration: none;}
     justify-content: center;
     align-items: center;
 }
+
+.form-register-wrapper .form-control {
+    height: calc(1.5em + 1.5rem + 2px);
+    border-radius: 0;
+}
+
+/*ESTILOS ESPECÍFICOS*/
+@media (max-width: 575.98px) {  }
+@media (min-width: 576px) and (max-width: 767.98px) { }
+@media (min-width: 768px) and (max-width: 991.98px) { }
+@media (min-width: 992px) and (max-width: 1199.98px) { }
+@media (min-width: 1200px) { }

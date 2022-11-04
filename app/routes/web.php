@@ -13,18 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/* -- página de registro -- */
 Route::get('/', function() {
     return view('register');
 });
 
+/* -- página de login -- */
 Route::get('/login', function() {
     return view('login');
 });
 
+/* -- página inicial de adm -- */
 Route::get('/dashboard', function() {
     return view('dashboard');
 });
 
+/*-- página inicial -- */
 Route::get('/user', function() {
     return view('user');
 });
