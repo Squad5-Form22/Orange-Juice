@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\DashboardAdmin;
+use App\Http\Controllers\DashboardCommon;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
@@ -20,15 +22,11 @@ Route::get('/', function () {
 });
 
 Route::group(['middleware' => 'isAdmin'], function () {
-    Route::get('/admin/dashboard', function () {
-        return view('admin/dashboard')->name('admin.dashboard');
-    });
+    Route::get('/admin/dashboard', DashboardAdmin::class)->name('admin.dashboard');
 });
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard')->name('dashboard');
-    });
+    Route::get('/dashboard', DashboardCommon::class)->name('dashboard');
     Route::post('/logout', [loginController::class, 'logout'])->name('logout');
 });
 
