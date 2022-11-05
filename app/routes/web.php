@@ -19,27 +19,24 @@ Route::get('/', function () {
     return view('landing_page');
 });
 
-Route::group(['middleware' => 'auth', 'isAdmin'], function () {
+Route::group(['middleware' => 'isAdmin'], function () {
     Route::get('/admin/dashboard', function () {
-        return view('dashboard')->name('dashboard');
+        return view('admin/dashboard')->name('admin.dashboard');
     });
+});
+
+Route::group(['middleware' => 'auth'], function () {
     Route::get('/dashboard', function () {
         return view('dashboard')->name('dashboard');
     });
     Route::post('/logout', [loginController::class, 'logout'])->name('logout');
 });
 
-Route::middleware(['auth', 'isAdmin'])->group(function () {
-    Route::get('/admin', function () {
-      return view('admin.dashboard');
-    })->name('dashboard');
-  });
-  
 
 Route::group(['middleware' => 'guest'], function () {
     Route::get('/register', [RegisterController::class, 'create']);
     Route::post('/register', [RegisterController::class, 'store'])->name('register');
-    
+
     Route::post('/login', [loginController::class, 'signin'])->name('login');
     Route::get('/login', [loginController::class, 'login'])->name('login.form');
 });
