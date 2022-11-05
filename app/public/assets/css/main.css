@@ -1,21 +1,27 @@
 /* Programa de foramção - Novembro 2022 
-- Marcus Mazza e Cristiano Albino */
+- Marcus Paulo Mazza e Cristiano Albino */
+
+@import url(bootstrap.min.css);
+@import url(fontawesome.css);
 
 /* ---------------------- ESTILOS GERAIS*/
 
+/* ------------- Cores gerais */
 :root{
     --first-color: #fff;
     --second-color: gray;
     --thirty-color: #000;
 }
 
-* { font-family: 'Open Sans', sans-serif; }
+/* ------------- Subscrição de estilos */
+* { font-family: 'Montserrat', sans-serif;}
 ul { padding:0; margin:0 }
 li {list-style: none;}
 a:hover{ text-decoration: none;}
 .form-group { margin:0; }
-.form-control { font-weight: 300; font-size: 0.9rem;}
-.form-control:focus { box-shadow: none;}
+.form-control { font-weight: 400; font-size: 0.9rem; border:1px solid #a0a7ab;}
+.form-control:focus, .btn-primary:focus,.btn-primary:not(:disabled):not(.disabled):active:focus { box-shadow: none; }
+
 
 /* ---------------------- ESTILOS ESPECÍFICOS*/
 
@@ -36,6 +42,19 @@ a:hover{ text-decoration: none;}
     padding-right: 0.5rem;
 }
 
+.navbar_fixed {
+    position: fixed;
+    width: 100%;
+    top: -50px;
+    left: 0;
+    right: 0;
+    transform: translateY(50px);
+    transition: transform 500ms ease, background 500ms ease;
+    -webkit-transition: transform 500ms ease, background 500ms ease;
+    box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
+    z-index: 30;
+}
+
 /*area de registro*/
 .register-wrapper {
     height: 100vh;
@@ -43,14 +62,40 @@ a:hover{ text-decoration: none;}
     justify-content: center;
     align-items: center;
 }
-
-.form-register-wrapper .form-control {
+.form-register-wrapper .form-control,
+.form-register-wrapper button {
     height: calc(1.5em + 1.5rem + 2px);
     border-radius: 0;
+    font-size: 0.9rem;
+}
+.form-register-wrapper input[type="password"]{
+    position: relative
+}
+.form-register-wrapper i {
+    position: absolute;
+    top: 0.89rem;
+    right: 0.87rem;
+    display: none;
+    color: #6c757d;
+    padding: 5px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+.form-register-wrapper i:hover {
+    opacity: 1;
+    transition: all 0.5ms;
 }
 
-/*ESTILOS ESPECÍFICOS*/
-@media (max-width: 575.98px) {  }
+
+/* modal */
+.modal-footer button {
+    border-radius:0;
+}
+/*RESPONSIVIDADE*/
+@media (max-width: 575.98px) { 
+    .register-wrapper {
+        height: 120vh;
+ }
 @media (min-width: 576px) and (max-width: 767.98px) { }
 @media (min-width: 768px) and (max-width: 991.98px) { }
 @media (min-width: 992px) and (max-width: 1199.98px) { }
