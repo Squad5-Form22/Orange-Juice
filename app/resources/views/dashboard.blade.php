@@ -1,4 +1,3 @@
-@extends('layout')
 <div class="container">
     <h1>Usuário da Comunidade: {{$user->name}}</h1>
 
