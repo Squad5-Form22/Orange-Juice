@@ -3,17 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DashboardAdmin extends Controller
 {
     /**
-     * Handle the incoming request.
+     * Mostra a página inicial do usuário logado admin
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
      */
-    public function __invoke(Request $request)
+    public function __invoke()
     {
-        return view('admin.dashboard');
+        return view('admin.dashboard')->with(['user'=>Auth::user()]);
     }
 }

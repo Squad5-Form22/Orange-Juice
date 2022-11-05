@@ -1,1 +1,1 @@
-<h1>Admin: {{Auth::user->name}}</h1>
+<h1>Admin: {{$user->name}}</h1>

@@ -23,13 +23,13 @@ Route::get('/', function () {
 
 Route::group(['middleware' => 'isAdmin'], function () {
     Route::get('/admin/dashboard', DashboardAdmin::class)->name('admin.dashboard');
-});
-
-Route::group(['middleware' => 'auth'], function () {
-    Route::get('/dashboard', DashboardCommon::class)->name('dashboard');
     Route::post('/logout', [loginController::class, 'logout'])->name('logout');
 });
 
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/home', DashboardCommon::class)->name('home');
+    Route::post('/logout', [loginController::class, 'logout'])->name('logout');
+});
 
 Route::group(['middleware' => 'guest'], function () {
     Route::get('/register', [RegisterController::class, 'create']);
