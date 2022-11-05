@@ -19,34 +19,27 @@
                         <h4 class="text-center text-secondary">Registre-se e faça parte!</h4>
                     </div>
                     <div class="form-content-wrapper">
-                        <form id="register-form" method="POST">
+                        <form id="register-form" method="POST" action="{{ route('register') }}">
                             @csrf
                             <div class="row no-gutters justify-content-between align-items-center">
                                 <div class="col-12 col-md-12">
                                     <div class="m-1">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" data-name="Nome" name="name"  value="{{ old('name') }}"  placeholder="Nome completo">
+                                            <input type="text" class="form-control @error('name') is-inv @enderror" data-name="Nome" name="name"  value="{{ old('name') }}"  placeholder="Nome completo">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-12">
                                     <div class="m-1">
                                         <div class="form-group">
-                                            <input type="email" class="form-control" data-name="E-mail" name="email" value="{{ old('email') }}" placeholder="E-mail">
+                                            <input type="email" class="form-control @error('email') is-inv @enderror" data-name="E-mail" name="email" value="{{ old('email') }}" placeholder="E-mail">
                                         </div>
                                     </div>
                                 </div>
-                                {{-- <div class="col-12 col-md-5">
-                                    <div class="m-1">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control telefone" data-name="Telefone" name="phone" value="{{ old('phone') }}" placeholder="Telefone">
-                                        </div>
-                                    </div>
-                                </div> --}}
                                 <div class="col-12 col-md-8">
                                     <div class="m-1">
                                         <div class="form-group">
-                                            <input type="password" class="form-control" data-name="Senha" name="password" value="{{ old('password') }}" placeholder="Crie sua Senha">
+                                            <input type="password" class="form-control @error('password') is-inv @enderror" data-name="Senha" name="password" value="{{ old('password') }}" placeholder="Crie sua Senha">
                                             <i class="fas fa-eye"></i>
                                         </div>
                                     </div>
@@ -68,6 +61,17 @@
                         <div class="mt-5">
                             <small class="mb-0 text-secondary text-center">© Copyright <script>document.write(new Date().getFullYear());</script> - Grupo fCamara | Squad 5 - Todos direitos reservados.</small>
                         </div>
+                    </div>
+                    <div class="col-12">
+                        @error('name')
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <strong>Erro!</strong> {{ $message }}.
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          @enderror
+                
                     </div>
                 </div>
             </div>

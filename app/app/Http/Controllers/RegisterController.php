@@ -16,15 +16,15 @@ class RegisterController extends Controller
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed']
+            'password' => ['required', 'string', 'min:8']
         ]);
 
         $dados = $request->only(['name', 'email', 'password']);
         $dados['password'] = Hash::make($dados['password']);
-
+ 
         User::create($dados);
 
-        return redirect()->route('dashboard');
+        return redirect()->route('home');
 
     }
 }

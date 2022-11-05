@@ -22,7 +22,7 @@ a:hover{ text-decoration: none;}
 .form-group { margin:0; }
 .form-control { font-weight: 400; font-size: 0.9rem; border:1px solid #a0a7ab;}
 .form-control:focus, .btn-primary:focus,.btn-primary:not(:disabled):not(.disabled):active:focus { box-shadow: none; }
-
+.is-inv {border:1px solid #dc3545!important; box-shadow: none; }
 
 /* ---------------------- ESTILOS ESPECÍFICOS*/
 
