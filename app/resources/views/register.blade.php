@@ -7,7 +7,7 @@
                 <div class="col-12">
                     <div class="mb-3 d-flex justify-content-center">
                         <a href="./">
-                            <img src="https://dummyimage.com/100/000/fff" class="img-fluid">
+                            <img src="https://dummyimage.com/100/000/fff" class="img-fluid" style="border-radius: 50%;">
                         </a>
                     </div>
                 </div>
@@ -18,7 +18,7 @@
                         <br>
                         <h4 class="text-center text-secondary">Registre-se e faça parte!</h4>
                     </div>
-                    <div class="form-register-wrapper">
+                    <div class="form-content-wrapper">
                         <form id="register-form" method="POST">
                             @csrf
                             <div class="row no-gutters justify-content-between align-items-center">
