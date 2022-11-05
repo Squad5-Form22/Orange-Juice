@@ -24,7 +24,7 @@ class RegisterController extends Controller
 
         User::create($dados);
 
-        return redirect()->route('dashboard');
+        return redirect()->route('home');
 
     }
 }
