@@ -1,3 +1,5 @@
+@section('titulo') Registro - Orange Juice @endsection
+
 @extends('layouts/layout')
 
 @section('conteudo')
@@ -18,6 +20,34 @@
                         <br>
                         <h4 class="text-center text-secondary">Registre-se e faça parte!</h4>
                     </div>
+
+                    <div class="w-100">
+                        @error('name')
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>Erro!</strong> {{ $message }}.
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                        @enderror
+                        @error('email')
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>Erro!</strong> {{ $message }}.
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                        @enderror
+                        @error('password')
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>Erro!</strong> {{ $message }}.
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                        @enderror
+                    </div>
+
                     <div class="form-content-wrapper">
                         <form id="register-form" method="POST" action="{{ route('register') }}">
                             @csrf
@@ -62,20 +92,8 @@
                             <small class="mb-0 text-secondary text-center">© Copyright <script>document.write(new Date().getFullYear());</script> - Grupo fCamara | Squad 5 - Todos direitos reservados.</small>
                         </div>
                     </div>
-                    <div class="col-12">
-                        @error('name')
-                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                            <strong>Erro!</strong> {{ $message }}.
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          @enderror
-                
-                    </div>
                 </div>
             </div>
-           
         </div>
     </div>
 @endsection

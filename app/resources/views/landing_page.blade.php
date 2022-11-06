@@ -1,3 +1,5 @@
+@section('titulo') Home - Orange Juice @endsection
+
 @extends('layouts/layout')
 
 @section('navbar')

@@ -14,13 +14,10 @@ $(function(){
     
     /*-- navbar mobile --*/
     $('.mobile-trigger i').on('click', function(e) {
-
         $('.mobile-menu-wrapper').css('transform', 'translate(0%)');
-
         if(e.target.className != 'fa-solid fa-bars'){
             $('.mobile-menu-wrapper').css('transform', 'translate(-100%)');
         }
-  
     });
 
     $(window).resize(function() {
