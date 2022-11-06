@@ -1,0 +1,210 @@
+/* Programa de foramção - Novembro 2022 
+- Marcus Paulo Mazza e Cristiano Albino */
+
+@import url(bootstrap.min.css);
+@import url(fontawesome.css);
+
+/* ---------------------- ESTILOS GERAIS*/
+
+/* ------------- Cores gerais */
+:root{
+    --first-color: #fff;
+    --second-color: #f8f9fa;
+    --thirty-color: gray;
+    --forth-color: #000;
+}
+
+/* ------------- Subscrição de estilos */
+* { font-family: 'Montserrat', sans-serif;}
+ul { padding:0; margin:0 }
+li {list-style: none;}
+a:hover{ text-decoration: none;}
+.form-group { margin:0; }
+.form-control { font-weight: 400; font-size: 0.9rem; border:1px solid #a0a7ab;}
+.form-control:focus, .btn-primary:focus,.btn-primary:not(:disabled):not(.disabled):active:focus { box-shadow: none; }
+.is-inv {border:1px solid #dc3545!important; box-shadow: none; }
+
+/* ---------------------- ESTILOS ESPECÍFICOS*/
+
+/* ------------- nav component */
+.navbar-wrapper {
+    padding: 0.5rem;
+    background-color: var(--second-color);
+}
+.navbar_fixed {
+    position: fixed;
+    width: 100%;
+    top: -50px;
+    left: 0;
+    right: 0;
+    transform: translateY(50px);
+    transition: transform 500ms ease, background 500ms ease;
+    -webkit-transition: transform 500ms ease, background 500ms ease;
+    box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
+    z-index: 30;
+}
+.menu-wrapper,
+.menu-content-wrapper,
+.menu-content,
+.brand-wrapper {
+    display: flex;
+    align-items: center;
+}
+.menu-content li:not(:last-child) {
+    padding-right: 0.5rem;
+}
+.menu-wrapper {
+    justify-content: space-between;
+}
+.mobile-trigger i {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #6c757d;
+}
+
+/* ------------- mobile navbar component */
+.mobile-menu-wrapper {
+    background-color: var(--first-color);
+    z-index: 35;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    transform: translate(-100%);
+    -webkit-transform: translate(-100%);
+    transition: transform 0.4s ease-in-out;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.menu-container {
+    padding: 2.3rem;
+    margin-top: 3rem;
+    height: 100vh;
+    position: relative;
+}
+.mobile-menu-top .mobile-trigger i {
+    opacity: 0.8;
+    color: #6c757d;
+    font-size: 1.6rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.mobile-menu-top .mobile-trigger i:hover {
+    opacity: 1;
+    color: #6c757d;
+    transition: all 0.5s;
+}
+.mobile-menu-brand {
+    display: flex; 
+}
+.mobile-menu-brand, 
+.mobile-menu-intro {
+    width: 100%;
+    margin-bottom: 1.8rem;
+}
+.mobile-menu-brand {
+    justify-content: center;
+}
+.mobile-menu-intro h4,
+.mobile-menu-intro h5 {
+    text-align: center;
+}
+
+/* ------------- login component */
+
+.login-wrapper,
+.register-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------------- form component */
+.form-content-wrapper .form-control,
+.form-content-wrapper button {
+    height: calc(1.5em + 1.5rem + 2px);
+    border-radius: 0;
+    font-size: 0.9rem;
+}
+.form-content-wrapper input[type="password"]{
+    position: relative
+}
+.form-content-wrapper i {
+    position: absolute;
+    top: 0.89rem;
+    right: 0.87rem;
+    display: none;
+    color: #6c757d;
+    padding: 5px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+.form-content-wrapper i:hover {
+    opacity: 1;
+    transition: all 0.5ms;
+}
+
+
+/* ------------- modal component */
+.modal-footer button {
+    border-radius:0;
+}
+
+
+/*RESPONSIVIDADE*/
+@media (max-width: 575.98px) { 
+    .register-wrapper {
+        height: 120vh;
+    }
+    .mobile-menu-wrapper,
+    .mobile-trigger{
+        display: block;
+    }
+    .menu-content {
+        display: none;
+    }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .register-wrapper {
+        height: 120vh;
+    }
+    .mobile-menu-wrapper,
+    .mobile-trigger{
+        display: block;
+    }
+    .menu-content {
+        display: none;
+    }
+}
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .register-wrapper {
+        height: 120vh;
+    }
+    .mobile-menu-wrapper,
+    .mobile-trigger{
+        display: none;
+    }
+    .menu-content {
+        display: inherit;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .mobile-menu-wrapper,
+    .mobile-trigger{
+        display: none;
+    }
+    .menu-content {
+        display: inherit;
+    }
+}
+@media (min-width: 1200px) {
+    .mobile-menu-wrapper,
+    .mobile-trigger{
+        display: none;
+    }
+    .menu-content {
+        display: inherit;
+    }
+ }
