@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+use App\Models\Trail;
+
 class DashboardCommon extends Controller
 {
     /**
@@ -14,6 +16,8 @@ class DashboardCommon extends Controller
      */
     public function __invoke()
     {
-        return view('dashboard')->with(['user'=>Auth::user()]);
+        $trails = Trail::all();
+
+        return view('dashboard')->with(['user'=>Auth::user(), 'trails'=>$trails]);
     }
 }
