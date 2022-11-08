@@ -16,24 +16,12 @@ class TopicSeeder extends Seeder
     public function run()
     {
         $topics = [
-            [
                 'name' => 'inicio',
-            ],
-            [
                 'name' => 'basico',
-            ],
-            [
                 'name' => 'basico developer',
-            ],
-            [
                 'name' => 'intermediario developer',
-            ],
-            [
                 'name' => 'basico ux',
-            ],
-            [
                 'name' => 'avançado qa',
-            ]
         ];
 
         foreach($topics as $topic) {
