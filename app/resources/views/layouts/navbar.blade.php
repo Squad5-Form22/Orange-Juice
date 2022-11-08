@@ -11,21 +11,20 @@
                     </div>
                     {{-- Marca --}}
                     <div class="mobile-menu-brand">
-                        <a href="./"><img src="https://dummyimage.com/60/000/fff" class="img-fluid mx-auto" style="border-radius: 50%">
+                        <a href="./">
+                            <img src="/assets/images/institucional/logo-orange.png" class="img-fluid" style="width: 60px;">
                         </a>
                     </div>
                     {{-- texto --}}
                     <div class="mobile-menu-intro">
-                        <h4 class="font-weight-bolder text-secondary">Orange Evolution</h4>
-                        <h5 class="text-secondary">A comunidade tech mais vitaminada</h5>
+                        <h4 class="font-weight-bolder">Orange Evolution</h4>
+                        <h5>A comunidade tech mais vitaminada</h5>
                     </div>
                     {{-- itens de navegação --}}
                     <ul class="mobile-menu-content">
-                        <li><a href="register">Registre-se</a></li>
-                        <li><a href="login">Login</a></li>
+                        @yield('mobile-menu-content')  
                     </ul>        
                 </div>
-
             </div>
         </div>
     </div>
@@ -35,14 +34,13 @@
     <div class="container">
         <div class="menu-wrapper">
             <div class="brand-wrapper">
-                <img src="https://dummyimage.com/60/000/fff" class="img-fluid" style="border-radius: 50%">
-                <h5 class="ml-2 mb-0 text-center font-weight-bolder text-secondary">Orange Evolution</h5>
+                <a href="./">
+                    <img src="/assets/images/institucional/logo-orange.png" class="img-fluid" style="width: 60px;">
+                </a>
             </div>
             <div class="menu-content-wrapper">
                 <ul class="menu-content">
-                    <li><a href="#">Conheça o Orange Evolution</a></li>
-                    <li><a href="register">Registre-se</a></li>
-                    <li><a href="login">Login</a></li>
+                    @yield('menu-content')  
                 </ul>
                 <div class="mobile-trigger">
                     <i class="fa-solid fa-bars"></i>
