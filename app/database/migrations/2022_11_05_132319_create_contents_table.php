@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name')->unique();
             $table->string('author');
             $table->String('type');
+            $table->String('url');
             $table->boolean('status')->default(true);
             $table->timestamps();
         });
