@@ -8,10 +8,16 @@
 
 /* ------------- Cores gerais */
 :root{
-    --first-color: #fff;
-    --second-color: #f8f9fa;
-    --thirty-color: gray;
-    --forth-color: #000;
+    --first-color: #02C09B;
+    --first-color-hover: #01a081;
+    --second-color: #0C1828;
+    --third-color: #F5F5F5;
+    --fourth-color: #D2D2D2;
+
+    --fifth-color:#FA2983;
+    --sixth-color:#FD66BE;
+    --seventh-color:#8B18D1;
+    --eighth-color:#3A5DCA;
 }
 
 /* ------------- Subscrição de estilos */
@@ -24,11 +30,43 @@ a:hover{ text-decoration: none;}
 .form-control:focus, .btn-primary:focus,.btn-primary:not(:disabled):not(.disabled):active:focus { box-shadow: none; }
 .is-inv {border:1px solid #dc3545!important; box-shadow: none; }
 
+/*botões*/
+
+.btn-primary {
+    background-color:  var(--first-color);
+    border: 1px solid var(--first-color);
+    color: inherit;
+    color: var(--third-color);
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:disabled,
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled):active:focus {
+    background-color:  var(--first-color-hover);
+    border: 1px solid var(--first-color-hover);
+    box-shadow: none !important;
+}
+.btn-outline-primary {
+    color:var(--first-color);
+    border-color: var(--first-color);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:disabled,
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus {
+    color: var(--third-color);
+    background-color: var(--first-color-hover);
+    border-color: var(--first-color-hover);
+    box-shadow: none !important;
+  }
 /* ---------------------- ESTILOS ESPECÍFICOS*/
 
 /* ------------- nav component */
 .navbar-wrapper {
-    padding: 0.5rem;
+    padding: 0.8rem;
     background-color: var(--second-color);
 }
 .navbar_fixed {
@@ -50,8 +88,18 @@ a:hover{ text-decoration: none;}
     display: flex;
     align-items: center;
 }
+.menu-content li a {
+    color: var(--third-color);
+    font-weight: 600;
+    min-width: 8rem;
+    border-radius: 3rem;
+}
+.menu-content li a:hover:not(.btn) {
+    opacity: 0.7;
+    transition: all 0.5ms;
+}
 .menu-content li:not(:last-child) {
-    padding-right: 0.5rem;
+    padding-right: 2.5rem;
 }
 .menu-wrapper {
     justify-content: space-between;
@@ -59,12 +107,12 @@ a:hover{ text-decoration: none;}
 .mobile-trigger i {
     font-size: 2rem;
     cursor: pointer;
-    color: #6c757d;
+    color: var(--third-color);
 }
 
 /* ------------- mobile navbar component */
 .mobile-menu-wrapper {
-    background-color: var(--first-color);
+    background-color: var(--second-color);
     z-index: 35;
     height: 100%;
     width: 100%;
@@ -84,7 +132,7 @@ a:hover{ text-decoration: none;}
 }
 .mobile-menu-top .mobile-trigger i {
     opacity: 0.8;
-    color: #6c757d;
+    color: var(--third-color);
     font-size: 1.6rem;
     position: absolute;
     top: 0;
@@ -92,7 +140,7 @@ a:hover{ text-decoration: none;}
 }
 .mobile-menu-top .mobile-trigger i:hover {
     opacity: 1;
-    color: #6c757d;
+    color: var(--third-color);
     transition: all 0.5s;
 }
 .mobile-menu-brand {
@@ -109,6 +157,7 @@ a:hover{ text-decoration: none;}
 .mobile-menu-intro h4,
 .mobile-menu-intro h5 {
     text-align: center;
+    color:var(--third-color);
 }
 
 /* ------------- login component */

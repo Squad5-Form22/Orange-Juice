@@ -9,7 +9,7 @@
                 <div class="col-12">
                     <div class="mb-3 d-flex justify-content-center">
                         <a href="./">
-                            <img src="https://dummyimage.com/100/000/fff" class="img-fluid" style="border-radius: 50%;">
+                            <img src="/assets/images/institucional/logo-orange.png" class="img-fluid" style="width: 60px;">
                         </a>
                     </div>
                 </div>

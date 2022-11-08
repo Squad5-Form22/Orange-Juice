@@ -1,7 +1,10 @@
+{{-- referencia ao layouts --}}
+@extends('layouts/layout') 
+
+{{-- titulo da página --}}
 @section('titulo') Registro - Orange Juice @endsection
 
-@extends('layouts/layout')
-
+{{-- conteúdo principal --}}
 @section('conteudo')
     <div class="register-wrapper">
         <div class="container">
@@ -9,7 +12,7 @@
                 <div class="col-12">
                     <div class="mb-3 d-flex justify-content-center">
                         <a href="./">
-                            <img src="https://dummyimage.com/100/000/fff" class="img-fluid" style="border-radius: 50%;">
+                            <img src="/assets/images/institucional/logo-orange.png" class="img-fluid" style="width: 60px;">
                         </a>
                     </div>
                 </div>
@@ -98,6 +101,7 @@
     </div>
 @endsection
 
+{{-- conteúdo do footer --}}
 @section('footer')
     @include('layouts/modal')
 @endsection
