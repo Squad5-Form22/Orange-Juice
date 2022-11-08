@@ -17,41 +17,41 @@ class ContentSeeder extends Seeder
     {
         $contents = [
             [
-                'name' => 'linkedin ux',
-                'url' => 'https://google.com/',
+                'name' => 'linkedin',
                 'author' => 'fulano',
-                'type' => 'vídeo',
+                'url' => 'https://google.com',
+                'type' => 'video'
             ],
             [
                 'name' => 'curriculo matador',
-                'url' => 'https://google.com/',
                 'author' => 'fulano',
-                'type' => 'vídeo',
+                'url' => 'https://google.com',
+                'type' => 'video'
             ],
             [
-                'name' => 'HTML',
-                'url' => 'https://google.com/',
+                'name' => 'html',
                 'author' => 'fulano',
-                'type' => 'vídeo',
+                'url' => 'https://google.com',
+                'type' => 'video'
             ],
             [
-                'name' => 'CSS',
-                'url' => 'https://google.com/',
-                'author' => 'Maria',
-                'type' => 'vídeo',
-            ],
-            [
-                'name' => 'tests unitários',
-                'url' => 'https://google.com/',
+                'name' => 'css',
                 'author' => 'fulano',
-                'type' => 'vídeo',
+                'url' => 'https://google.com',
+                'type' => 'video'
             ],
             [
-                'name' => 'figma',
-                'url' => 'https://google.com/',
-                'author' => 'João Joaquin',
-                'type' => 'vídeo',
+                'name' => 'PHP',
+                'author' => 'fulano',
+                'url' => 'https://google.com',
+                'type' => 'video'
             ],
+            [
+                'name' => 'Figma',
+                'author' => 'fulano',
+                'url' => 'https://google.com',
+                'type' => 'video'
+            ]
         ];
 
         foreach($contents as $content) {

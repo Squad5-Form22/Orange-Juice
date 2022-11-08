@@ -16,9 +16,15 @@ class TrailSeeder extends Seeder
     public function run()
     {
         $trails = [
-            'name' => 'ux',
-            'name' => 'qa',
-            'name' => 'developer',
+            [
+                'name' => 'ux',
+            ],
+            [
+                'name' => 'qa',
+            ],
+            [
+                'name' => 'developer',
+            ]
         ];
 
         foreach($trails as $trail) {
