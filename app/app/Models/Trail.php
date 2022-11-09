@@ -9,7 +9,18 @@ class Trail extends Model
 {
     use HasFactory;
 
-    /**
+    /**contentcontent    /**contentcontent    /**    /**contentcontent
+    /**contentcontent
+contentcontent    /**contentcontent    /**con    /**contentcontent
+tentcontent
+
+
+
+
+
+
+
+
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
@@ -18,4 +29,8 @@ class Trail extends Model
         'name',
         'status',
     ];
+
+    public function topics() {
+        return $this->belongsToMany('App\Models\Topic');
+    }
 }

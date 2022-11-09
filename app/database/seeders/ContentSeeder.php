@@ -20,37 +20,43 @@ class ContentSeeder extends Seeder
                 'name' => 'linkedin',
                 'author' => 'fulano',
                 'url' => 'https://google.com',
-                'type' => 'video'
+                'type' => 'video', 
+                'topic_id' => rand(1,5)
             ],
             [
                 'name' => 'curriculo matador',
                 'author' => 'fulano',
                 'url' => 'https://google.com',
-                'type' => 'video'
+                'type' => 'video',
+                'topic_id' => rand(1,5)
             ],
             [
                 'name' => 'html',
                 'author' => 'fulano',
                 'url' => 'https://google.com',
-                'type' => 'video'
+                'type' => 'video',
+                'topic_id' => rand(1,5)
             ],
             [
                 'name' => 'css',
                 'author' => 'fulano',
                 'url' => 'https://google.com',
-                'type' => 'video'
+                'type' => 'video',
+                'topic_id' => rand(1,5)
             ],
             [
                 'name' => 'PHP',
                 'author' => 'fulano',
                 'url' => 'https://google.com',
-                'type' => 'video'
+                'type' => 'video',
+                'topic_id' => rand(1,5)
             ],
             [
                 'name' => 'Figma',
                 'author' => 'fulano',
                 'url' => 'https://google.com',
-                'type' => 'video'
+                'type' => 'video',
+                'topic_id' => rand(1,5)
             ]
         ];
 

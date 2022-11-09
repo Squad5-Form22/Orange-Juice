@@ -13,11 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('trail_to_topics', function (Blueprint $table) {
-            $table->foreignId('trail_id')->constrained();
+        Schema::table('contents', function (Blueprint $table) {
             $table->foreignId('topic_id')->constrained();
-            $table->primary(['trail_id', 'topic_id']);
-            $table->timestamps();
         });
     }
 
@@ -28,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('trail_to_topic');
+        Schema::table('contents', function (Blueprint $table) {
+            $table->foreignId('topic_id')->constrained()->onDelete('cascade');
+        });
     }
 };

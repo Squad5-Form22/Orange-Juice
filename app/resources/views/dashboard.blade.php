@@ -34,8 +34,12 @@
 @section('conteudo')
     <div class="magic-box">
         <div class="container">
-            <div class="d-flex justify-content-center">
-                <h1>Usuário da Comunidade: {{ $user->name }}</h1>
+                <ul>
+                    @foreach($trails as $trail) {
+                        <a href="/trail/{{ $trail->id }}"><li>{{ $trail->name }}</li></a>
+                    }
+                    @endforeach
+                </ul>
             </div>
         </div>
     </div>

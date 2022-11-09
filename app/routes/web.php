@@ -23,17 +23,17 @@ Route::get('/', function () {
     return view('landing_page');
 });
 
-Route::group(['middleware' => 'isAdmin'], function () {
-    Route::get('/admin/dashboard', DashboardAdmin::class)->name('admin.dashboard');
-    Route::post('/logout', [loginController::class, 'logout'])->name('logout');
-});
+// Route::group(['middleware' => 'isAdmin'], function () {
+//     Route::get('/admin/dashboard', DashboardAdmin::class)->name('admin.dashboard');
+//     Route::post('/logout', [loginController::class, 'logout'])->name('logout');
+// });
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/dashboard', DashboardCommon::class)->name('dashboard');
     
     Route::post('/logout', [loginController::class, 'logout'])->name('logout');
     
-    Route::get('/trail/{trail_name}', [TrailController::class, 'index'])->name('trail');
+    Route::get('/trail/{trail_id}', [TrailController::class, 'index'])->name('trail');
 });
 
 Route::group(['middleware' => 'guest'], function () {
