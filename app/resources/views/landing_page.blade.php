@@ -13,13 +13,12 @@
         <li><a href="login" class="btn btn-outline-primary">Login</a></li>
         <li><a href="register" class="btn btn-primary">cadastre-se</a></li>
     </div>
-  
     @endsection
 
     {{-- min-width 768px --}}
     @section('menu-content')
         <li><a href="login" class="btn btn-outline-primary">Login</a></li>
-        <li><a href="cadastr-se" class="btn btn-primary">cadastre-se</a></li>
+        <li><a href="register" class="btn btn-primary">cadastre-se</a></li>
     @endsection
 @endsection
 

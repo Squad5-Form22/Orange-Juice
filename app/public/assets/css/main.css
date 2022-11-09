@@ -25,13 +25,14 @@
 ul { padding:0; margin:0 }
 li {list-style: none;}
 a:hover{ text-decoration: none;}
-.form-group { margin:0; }
-.form-control { font-weight: 400; font-size: 0.9rem; border:1px solid #a0a7ab;}
-.form-control:focus, .btn-primary:focus,.btn-primary:not(:disabled):not(.disabled):active:focus { box-shadow: none; }
-.is-inv {border:1px solid #dc3545!important; box-shadow: none; }
+.form-control { font-weight: 400; font-size: 0.9rem; border:1px solid #d0d0d0;}
+.form-control::placeholder {color: #d0d0d0;}
+.form-control:focus, .btn-primary:focus,.btn-primary:not(:disabled):not(.disabled):active:focus { box-shadow: none; border: 1px solid #d0d0d0; }
+.is-inv { border:1px solid #dc3545!important; box-shadow: none; }
+.link-bl { color: var(--eighth-color) }
+.link-pk { color: var(--sixth-color) }
 
 /*botões*/
-
 .btn-primary {
     background-color:  var(--first-color);
     border: 1px solid var(--first-color);
@@ -159,7 +160,10 @@ a:hover{ text-decoration: none;}
     text-align: center;
     color:var(--third-color);
 }
-
+.mobile-menu-content li a {
+    min-width: 8rem;
+    border-radius: 3rem;
+}
 /* ------------- login component */
 
 .login-wrapper,
@@ -168,24 +172,44 @@ a:hover{ text-decoration: none;}
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--second-color);
 }
+.register-wrapper .link-bl,
+.register-wrapper .link-pk {
+    font-weight: 700;
+} 
+.register-wrapper .link-bl:hover {
+    color: var(--eighth-color);
+    opacity: 0.8;
+    transition: all 0.5ms;
+}
+.register-wrapper .link-pk:hover {
+    color: var(--sixth-color);
+    opacity: 0.8;
+    transition: all 0.5ms;
+}
+
 
 /* ------------- form component */
 .form-content-wrapper .form-control,
 .form-content-wrapper button {
     height: calc(1.5em + 1.5rem + 2px);
-    border-radius: 0;
+    border-radius: 3rem;
     font-size: 0.9rem;
+}
+.form-content-wrapper button {
+    font-weight: 600;
+    font-size: 1rem;
 }
 .form-content-wrapper input[type="password"]{
     position: relative
 }
 .form-content-wrapper i {
     position: absolute;
-    top: 0.89rem;
-    right: 0.87rem;
+    top: 2.87rem;
+    right: 1.10rem;
     display: none;
-    color: #6c757d;
+    color: #d0d0d0;
     padding: 5px;
     cursor: pointer;
     opacity: 0.8;
