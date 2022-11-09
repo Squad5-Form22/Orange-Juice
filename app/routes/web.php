@@ -39,3 +39,11 @@ Route::group(['middleware' => 'guest'], function () {
     Route::post('/login', [loginController::class, 'signin'])->name('login');
     Route::get('/login', [loginController::class, 'login'])->name('login.form');
 });
+
+Route::get('/trail', function () {
+    return view('trail');
+});
+
+Route::get('/main-dashboard', function () {
+    return view('dashboard');
+});

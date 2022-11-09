@@ -32,10 +32,53 @@
 
 {{-- conteúdo principal --}}
 @section('conteudo')
-    <div class="magic-box">
+    <div class="dashboard-wrapper">
         <div class="container">
-            <div class="d-flex justify-content-center">
-                <h1>Usuário da Comunidade: {{ $user->name }}</h1>
+            <div class="row no-gutters justify-content-center">
+                <div class="col-11 col-sm-12">
+                    <div class="my-2">
+                       <div class="dashboard-title">
+                            <h2>Bem vinda(o): {{ $user->name }}</h2>
+                            <h3>Escolha sua Trilha de Conhecimento</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-11 col-sm-11 col-md-4">
+                    <div class="m-3">
+                        <a href="">
+                            <div class="trail-card-wrapper">
+                                <img src="https://dummyimage.com/1000/ebebeb/707070">
+                                <div class="trail-content-wrapper">
+                                    <h4>UX / UI Design</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-11 col-sm-11 col-md-4">
+                    <div class="m-3">
+                        <a href="">
+                            <div class="trail-card-wrapper">
+                                <img src="https://dummyimage.com/1000/ebebeb/707070">
+                                <div class="trail-content-wrapper">
+                                    <h4>Desenvolvimento Full Stack</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-11 col-sm-11 col-md-4">
+                    <div class="m-3">
+                        <a href="trail">
+                            <div class="trail-card-wrapper">
+                                <img src="https://dummyimage.com/1000/ebebeb/707070">
+                                <div class="trail-content-wrapper">
+                                    <h4>Quality Assurance</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -43,14 +86,5 @@
 
 {{-- conteúdo do footer --}}
 @section('footer')
-    @include('layouts/footer')
-@endsection
 
-<style>
-    .magic-box {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-</style>
+@endsection

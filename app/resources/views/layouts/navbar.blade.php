@@ -30,7 +30,7 @@
     </div>
 </div>
 
-<nav class="navbar-wrapper border-bottom">
+<nav class="navbar-wrapper">
     <div class="container">
         <div class="menu-wrapper">
             <div class="brand-wrapper">
