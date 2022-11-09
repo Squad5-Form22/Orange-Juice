@@ -5,7 +5,7 @@ $(function(){
     /*-- Navbar fixa -- */
     $(document).on('scroll', function() {
         var d = $(this).scrollTop();
-        if( d > 70){
+        if( d > 90){
             $('.navbar-wrapper').addClass('navbar_fixed')
         } else {
             $('.navbar-wrapper').removeClass('navbar_fixed');
