@@ -31,6 +31,11 @@ tentcontent
     ];
 
     public function topics() {
-        return $this->belongsToMany('App\Models\Topic');
+        return $this->belongsToMany(
+            Topic::class,
+            'trail_to_topics',
+            'trail_id',
+            'topic_id'
+        );
     }
 }

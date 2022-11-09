@@ -18,6 +18,7 @@ class Topic extends Model
     protected $fillable = [
         'name',
         'status',
+        // 'trail_id',
     ];
 
     public function contents() {
@@ -25,6 +26,11 @@ class Topic extends Model
     }
 
     public function trails() {
-        return $this->belongsToMany('App\Models\Trail');
+        return $this->belongsToMany(
+            Trail::class,
+            'trail_to_topics',
+            'trail_id',
+            'topic_id'
+        );
     }
 }

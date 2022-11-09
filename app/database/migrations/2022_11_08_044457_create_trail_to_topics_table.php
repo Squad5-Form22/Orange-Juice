@@ -14,9 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('trail_to_topics', function (Blueprint $table) {
-            $table->foreignId('trail_id')->constrained();
-            $table->foreignId('topic_id')->constrained();
+            $table->unsignedBigInteger('trail_id');
+            $table->foreign('trail_id')->references('id')->on('trails')->onDelete('cascade');
+
+            $table->unsignedBigInteger('topic_id');
+            $table->foreign('topic_id')->references('id')->on('topics')->onDelete('cascade');
+
             $table->primary(['trail_id', 'topic_id']);
+
             $table->timestamps();
         });
     }

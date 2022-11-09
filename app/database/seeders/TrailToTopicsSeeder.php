@@ -17,29 +17,17 @@ class TrailToTopicsSeeder extends Seeder
     {
         $relations = [
                 [
-                    'trail_id' => rand(1, 4),
-                    'topic_id' => rand(1, 5)
+                    'trail_id' => rand(1, 3),
+                    'topic_id' => rand(1, 4)
                 ],
                 [
-                    'trail_id' => rand(1, 4),
-                    'topic_id' => rand(1, 5)
+                    'trail_id' => rand(1, 3),
+                    'topic_id' => rand(1, 4)
                 ],
                 [
-                    'trail_id' => rand(1, 4),
-                    'topic_id' => rand(1, 5)
+                    'trail_id' => rand(1, 3),
+                    'topic_id' => rand(1, 4)
                 ],
-                [
-                    'trail_id' => rand(1, 4),
-                    'topic_id' => rand(1, 5)
-                ],
-                [
-                    'trail_id' => rand(1, 4),
-                    'topic_id' => rand(1, 5)
-                ],
-                [
-                    'trail_id' => rand(1, 4),
-                    'topic_id' => rand(1, 5)
-                ]
             ];
 
         foreach($relations as $relationships) {

@@ -20,6 +20,10 @@ return new class extends Migration
             $table->String('type');
             $table->String('url');
             $table->boolean('status')->default(true);
+
+            // $table->unsignedBigInteger('topic_id');
+            // $table->foreign('topic_id')->references('id')->on('topics')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

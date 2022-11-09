@@ -17,6 +17,10 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->boolean('status')->default(true);
+
+            // $table->unsignedBigInteger('trail_id');
+            // $table->foreign('trail_id')->references('id')->on('trail_to_topics')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

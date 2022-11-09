@@ -11,10 +11,9 @@ use App\Models\TrailToTopics;
 class TrailController extends Controller
 {
     public function index($trail_id) {
-        $trail = Trail::where('id', $trail_id);
-
-        $topics = $trail->topics;
-        // $topics = TrailToTopics::where('trail_id', $trail_id)->get();
-        return view('trail')->with(['trail_name' => $trail, 'topics' => $topics]);
+        $trails = Trail::with('trail_to_topics')->first();
+        print_r($trails->topics->toArray());
+        
+        // return view('trail')->with(['trail_name' => $trail]);
     }
 }
