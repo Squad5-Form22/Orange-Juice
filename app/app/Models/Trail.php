@@ -23,8 +23,8 @@ class Trail extends Model
         return $this->belongsToMany(
             Topic::class,
             'topic_trails',
-            'topic_id',
             'trail_id',
+            'topic_id',
         );
     }
 }

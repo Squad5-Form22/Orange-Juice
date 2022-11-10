@@ -21,10 +21,15 @@ class Topic extends Model
     ];
 
     public function contents() {
-        return $this->hasMany('App\Models\Content');
+        return $this->hasMany(Content::class, 'topic_id');
     }
 
     public function trails() {
-        return $this->belongsToMany(Trail::class);
+        return $this->belongsToMany(
+            Trail::class,
+            'topic_trails',
+            'topic_id',
+            'trail_id',
+        );
     }
 }

@@ -16,15 +16,14 @@ return new class extends Migration
         Schema::dropIfExists('topic_trails');
         Schema::create('topic_trails', function (Blueprint $table) {
             $table->engine = 'InnoDB';
-            $table->increments('id');
             $table->unsignedInteger('topic_id');
             $table->unsignedInteger('trail_id');
             $table->timestamps();
         });
 
         Schema::table('topic_trails', function (Blueprint $table) {
-            $table->foreign('topic_id')->references('id')->on('topics');
-            $table->foreign('trail_id')->references('id')->on('trails');
+            $table->foreign('topic_id')->references('id')->on('topics')->onDelete('cascade');
+            $table->foreign('trail_id')->references('id')->on('trails')->onDelete('cascade');
         });
     }
 
