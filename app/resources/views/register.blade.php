@@ -9,8 +9,8 @@
     <div class="register-wrapper">
         <div class="container">        
             <div class="row no-gutters justify-content-center">
-                <div class="col-11 col-md-10 col-lg-6">
-                    <div class="register-content-wrapper p-5 bg-light">
+                <div class="col-12 col-md-10 col-lg-6">
+                    <div class="register-content-wrapper bg-light">
                         <div class="mb-3 d-flex justify-content-center">
                             <a href="./">
                                 <img src="/assets/images/institucional/logo-orange.png" class="img-fluid" style="width: 160px;">
