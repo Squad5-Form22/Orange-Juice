@@ -13,14 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('user_completed_contents');
         Schema::create('user_completed_contents', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
 
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            // $table->unsignedBigInteger('user_id');
+            // $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
-            $table->unsignedBigInteger('content_id');
-            $table->foreign('content_id')->references('id')->on('contents')->onDelete('cascade');
+            // $table->unsignedBigInteger('content_id');
+            // $table->foreign('content_id')->references('id')->on('contents')->onDelete('cascade');
 
             $table->timestamps();
         });

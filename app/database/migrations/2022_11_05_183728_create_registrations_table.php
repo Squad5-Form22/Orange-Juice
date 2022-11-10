@@ -13,16 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('registrations');
         Schema::create('registrations', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
 
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            // $table->unsignedBigInteger('user_id');
+            // $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
-            $table->unsignedBigInteger('trail_id');
-            $table->foreign('trail_id')->references('id')->on('trails')->onDelete('cascade');
+            // $table->unsignedBigInteger('trail_id');
+            // $table->foreign('trail_id')->references('id')->on('trails')->onDelete('cascade');
 
-            $table->boolean('trail_finished')->default(false);
+            // $table->boolean('trail_finished')->default(false);
 
             $table->timestamps();
         });

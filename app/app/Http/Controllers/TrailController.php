@@ -7,13 +7,13 @@ use App\Models\Topic;
 use App\Models\Trail;
 
 use App\Models\TrailToTopics;
+use Illuminate\Support\Facades\Auth;
 
 class TrailController extends Controller
 {
     public function index($trail_id) {
-        $trails = Trail::with('trail_to_topics')->first();
-        print_r($trails->topics->toArray());
+        $topics = Trail::with('topics')->findOrFail($trail_id);
         
-        // return view('trail')->with(['trail_name' => $trail]);
+        return view('trail/'.$trail_id)->with(['user'=>Auth::user(), 'topics'=>$topics]);
     }
 }

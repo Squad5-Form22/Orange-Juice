@@ -13,16 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('trail_to_topics', function (Blueprint $table) {
-            $table->unsignedBigInteger('trail_id');
-            $table->foreign('trail_id')->references('id')->on('trails')->onDelete('cascade');
-
+        Schema::create('topic_trails', function (Blueprint $table) {
+            $table->id();
             $table->unsignedBigInteger('topic_id');
-            $table->foreign('topic_id')->references('id')->on('topics')->onDelete('cascade');
-
-            $table->primary(['trail_id', 'topic_id']);
-
+            $table->unsignedBigInteger('trail_id');
             $table->timestamps();
+        });
+
+        Schema::table('topic_trails', function (Blueprint $table) {
+            $table->foreign('topic_id')->references('id')->on('topics')->onDelete('cascade');
+            $table->foreign('trail_id')->references('id')->on('trails')->onDelete('cascade');
         });
     }
 
@@ -33,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('trail_to_topic');
+        Schema::dropIfExists('topic_trails');
     }
 };

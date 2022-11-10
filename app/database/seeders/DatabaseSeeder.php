@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\TopicTrail;
 use App\Models\User;
 // use App\Models\TrailToTopics;
 // use App\Models\TopicToContents;
@@ -25,7 +26,7 @@ class DatabaseSeeder extends Seeder
         $this->call(TopicSeeder::class);
         $this->call(ContentSeeder::class);
         User::factory(10)->create();
-        $this->call(TrailToTopicsSeeder::class);
+        $this->call(TopicTrailSeeder::class);
         // $this->call(TopicToContentsSeeder::class);
     }
 }
