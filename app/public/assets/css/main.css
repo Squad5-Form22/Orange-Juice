@@ -28,7 +28,6 @@ a:hover{ text-decoration: none;}
 .form-control { font-weight: 400; font-size: 0.9rem; border:1px solid #d0d0d0;}
 .form-control::placeholder {color: #d0d0d0;}
 .form-control:focus, .btn-primary:focus,.btn-primary:not(:disabled):not(.disabled):active:focus { box-shadow: none; border: 1px solid #d0d0d0; }
-.container {max-width: 1400px !important;}
 .is-inv { border:1px solid #dc3545!important; box-shadow: none; }
 .link-bl { color: var(--eighth-color) }
 .link-pk { color: var(--sixth-color) }
@@ -179,7 +178,6 @@ a:hover{ text-decoration: none;}
 /* ------------- login component */
 .login-wrapper,
 .register-wrapper {
-    min-height: 100vh;
     background-color: var(--second-color);
 }
 .register-wrapper .link-bl,
@@ -196,7 +194,9 @@ a:hover{ text-decoration: none;}
     opacity: 0.8;
     transition: all 0.5ms;
 }
-
+.register-content-wrapper {
+    padding: 3rem;
+}
 
 /* ------------- form component */
 .form-content-wrapper .form-control,
@@ -228,7 +228,7 @@ a:hover{ text-decoration: none;}
 }
 
 
-/* ------------- dashboar component */
+/* ------------- dashboard component */
 .dashboard-wrapper {
     min-height: 90vh;
     background-color: var(--third-color);
@@ -287,8 +287,9 @@ a:hover{ text-decoration: none;}
 
 /*RESPONSIVIDADE*/
 @media (max-width: 575.98px) { 
-    .register-wrapper {
-        height: 120vh;
+    .login-wrapper,
+    .register-wrapper  {
+        min-height: 110vh;
     }
     .mobile-menu-wrapper,
     .mobile-trigger{
@@ -296,11 +297,17 @@ a:hover{ text-decoration: none;}
     }
     .menu-content {
         display: none;
+    }
+
+    /*---Register ---*/
+    .register-content-wrapper {
+        padding: 3rem 1.5rem;
     }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
+    .login-wrapper,
     .register-wrapper {
-        height: 120vh;
+        min-height: 110vh;
     }
     .mobile-menu-wrapper,
     .mobile-trigger{
@@ -309,10 +316,16 @@ a:hover{ text-decoration: none;}
     .menu-content {
         display: none;
     }
+
+    /*---Register ---*/
+    .register-content-wrapper {
+        padding: 3rem 1.5rem;
+    }
 }
 @media (min-width: 768px) and (max-width: 991.98px) { 
-    .register-wrapper {
-        height: 120vh;
+    .login-wrapper,
+    .register-wrapper  {
+        min-height: 110vh;
     }
     .mobile-menu-wrapper,
     .mobile-trigger{
@@ -323,6 +336,10 @@ a:hover{ text-decoration: none;}
     }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
+    .login-wrapper,
+    .register-wrapper  {
+        min-height: 110vh;
+    }
     .mobile-menu-wrapper,
     .mobile-trigger{
         display: none;
@@ -332,6 +349,10 @@ a:hover{ text-decoration: none;}
     }
 }
 @media (min-width: 1200px) {
+    .login-wrapper,
+    .register-wrapper {
+        min-height: 100vh;
+    }
     .mobile-menu-wrapper,
     .mobile-trigger{
         display: none;
