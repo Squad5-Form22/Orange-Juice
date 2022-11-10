@@ -22,10 +22,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        User::factory(10)->create();
         $this->call(TrailSeeder::class);
         $this->call(TopicSeeder::class);
         $this->call(ContentSeeder::class);
-        User::factory(10)->create();
         $this->call(TopicTrailSeeder::class);
         // $this->call(TopicToContentsSeeder::class);
     }
