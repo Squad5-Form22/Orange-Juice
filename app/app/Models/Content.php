@@ -23,7 +23,7 @@ class Content extends Model
         'topic_id'
     ];
 
-    public function topic() {
-        return $this->belongsTo('App\Models\Topic');
+    public function topics() {
+        return $this->hasMany(Topic::class, 'topic_id');
     }
 }

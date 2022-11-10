@@ -13,18 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::dropIfExists('contents');
-        Schema::create('contents', function (Blueprint $table) {
+        Schema::dropIfExists('topics');
+        Schema::create('topics', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->unique();
-            $table->string('author');
-            $table->String('type');
-            $table->String('url');
+            $table->string('name');
             $table->boolean('status')->default(true);
-
-            // $table->unsignedBigInteger('topic_id');
-            // $table->foreign('topic_id')->references('id')->on('topics')->onDelete('cascade');
-
             $table->timestamps();
         });
     }
@@ -36,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contents');
+        Schema::dropIfExists('topics');
     }
 };

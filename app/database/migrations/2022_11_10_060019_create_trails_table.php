@@ -13,15 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::dropIfExists('topics');
-        Schema::create('topics', function (Blueprint $table) {
+        Schema::dropIfExists('trails');
+        Schema::create('trails', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('name')->unique();
             $table->boolean('status')->default(true);
-
-            // $table->unsignedBigInteger('trail_id');
-            // $table->foreign('trail_id')->references('id')->on('trail_to_topics')->onDelete('cascade');
-
             $table->timestamps();
         });
     }
@@ -33,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('topics');
+        Schema::dropIfExists('trails');
     }
 };

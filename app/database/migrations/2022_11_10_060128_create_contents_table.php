@@ -1,3 +1,4 @@
+
 <?php
 
 use Illuminate\Database\Migrations\Migration;
@@ -13,16 +14,21 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::dropIfExists('trails');
-        Schema::create('trails', function (Blueprint $table) {
+        Schema::dropIfExists('contents');
+        Schema::create('contents', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name')->unique();
+            $table->string('author');
+            $table->String('type');
+            $table->String('url');
             $table->boolean('status')->default(true);
-
-            // $table->unsignedBigInteger('topic_id');
-            // $table->foreign('topic_id')->references('id')->on('trail_to_topics')->onDelete('cascade');
-
+            $table->unsignedInteger('topic_id');
             $table->timestamps();
+        });
+
+        Schema::table('contents', function (Blueprint $table) {
+            $table->foreign('topic_id')->references('id')->on('topics');
         });
     }
 
@@ -33,6 +39,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('trails');
+        Schema::dropIfExists('contents');
     }
 };
