@@ -32,29 +32,32 @@
 
 {{-- conteúdo principal --}}
 @section('conteudo')
-    <div class="magic-box">
+    <div class="dashboard-wrapper">
         <div class="container">
-                <ul>
-                    @foreach($trails as $trail) {
-                        <a href="/trail/{{ $trail->id }}"><li>{{ $trail->name }}</li></a>
-                    }
+            <div class="row no-gutters justify-content-center">
+                <div class="col-11 col-sm-12">
+                    <div class="my-2">
+                       <div class="dashboard-title">
+                            <h2>Bem vinda(o): {{ $user->name }}</h2>
+                            <h3>Escolha sua Trilha de Conhecimento</h3>
+                        </div>
+                    </div>
+                </div>
+                    @foreach($trails as $trail)
+                        <div class="col-11 col-sm-11 col-md-4">
+                            <div class="m-3">
+                                <a href="/trail/{{ $trail->id }}">
+                                    <div class="trail-card-wrapper">
+                                        <img src="assets/images/trilhas/trilha_{{ $trail->name }}.png">
+                                        <div class="trail-content-wrapper">
+                                            <h4>{{ $trail->name }}</h4>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     @endforeach
-                </ul>
             </div>
         </div>
     </div>
 @endsection
-
-{{-- conteúdo do footer --}}
-@section('footer')
-    @include('layouts/footer')
-@endsection
-
-<style>
-    .magic-box {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-</style>
