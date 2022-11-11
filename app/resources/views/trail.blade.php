@@ -73,13 +73,25 @@
                             <div id="Inicio" class="collapse" aria-labelledby="headingInicio" data-parent="#cardInicio">
                                 <div class="card-body">
                                     <div class="card-item">
-                                        <h5>Guia definitivo de como migrar para UX Design: 5 passos para virar um UX</h5>
+                                        <label class="card-title">
+                                            <input type="checkbox" checked>
+                                            <span class="marcacao">
+                                                <i class="fas fa-check"></i>
+                                            </span>
+                                            <h5><a href="" class="text-dark">Guia definitivo de como migrar para UX Design: 5 passos para virar um UX</a></h5>
+                                        </label>
                                         <div class="d-flex">                                             
                                             <span class="bdg-artigo"><i class="las la-book-open"></i>Artigo</span> <p class="ml-2">Tema: Migração de Carreira  |  Fonte: Orange Juice  |  Duração: 6 min</p>
                                         </div>
                                     </div>    
                                     <div class="card-item">
-                                        <h5>Guia definitivo de como migrar para UX Design: 5 passos para virar um UX</h5>
+                                        <label class="card-title">
+                                            <input type="checkbox">
+                                            <span class="marcacao">
+                                                <i class="fas fa-check"></i>
+                                            </span>
+                                            <h5><a href="" class="text-dark">Guia definitivo de como migrar para UX Design: 5 passos para virar um UX</a></h5>
+                                        </label>
                                         <div class="d-flex">                                             
                                             <span class="bdg-video"><i class="lab la-youtube"></i>Vídeo</span> <p class="ml-2">Tema: Migração de Carreira  |  Fonte: Orange Juice  |  Duração: 6 min</p>
                                         </div>
@@ -101,13 +113,25 @@
                             <div id="ConceitosBasicos" class="collapse" aria-labelledby="headingConceitosBasicos" data-parent="#cardConceitosBasicos">
                                 <div class="card-body">
                                     <div class="card-item">
-                                        <h5>Guia definitivo de como migrar para UX Design: 5 passos para virar um UX</h5>
+                                        <label class="card-title">
+                                            <input type="checkbox">
+                                            <span class="marcacao">
+                                                <i class="fas fa-check"></i>
+                                            </span>
+                                            <h5><a href="" class="text-dark">Guia definitivo de como migrar para UX Design: 5 passos para virar um UX</a></h5>
+                                        </label>
                                         <div class="d-flex">                                             
-                                            <span data-color="#8B18D1"><i class="las la-book-open"></i>Artigo</span> <p class="ml-2">Tema: Migração de Carreira  |  Fonte: Orange Juice  |  Duração: 6 min</p>
+                                            <span class="bdg-artigo"><i class="las la-book-open"></i>Artigo</span> <p class="ml-2">Tema: Migração de Carreira  |  Fonte: Orange Juice  |  Duração: 6 min</p>
                                         </div>
                                     </div>    
                                     <div class="card-item">
-                                        <h5>Guia definitivo de como migrar para UX Design: 5 passos para virar um UX</h5>
+                                        <label class="card-title">
+                                            <input type="checkbox">
+                                            <span class="marcacao">
+                                                <i class="fas fa-check"></i>
+                                            </span>
+                                            <h5><a href="" class="text-dark">Guia definitivo de como migrar para UX Design: 5 passos para virar um UX</a></h5>
+                                        </label>
                                         <div class="d-flex">                                             
                                             <span class="bdg-video"><i class="lab la-youtube"></i>Vídeo</span> <p class="ml-2">Tema: Migração de Carreira  |  Fonte: Orange Juice  |  Duração: 6 min</p>
                                         </div>
@@ -129,13 +153,25 @@
                             <div id="Opcional" class="collapse" aria-labelledby="headingOpcional" data-parent="#CardOpcioanl">
                                 <div class="card-body">
                                     <div class="card-item">
-                                        <h5>Guia definitivo de como migrar para UX Design: 5 passos para virar um UX</h5>
+                                        <label class="card-title">
+                                            <input type="checkbox">
+                                            <span class="marcacao">
+                                                <i class="fas fa-check"></i>
+                                            </span>
+                                            <h5><a href="" class="text-dark">Guia definitivo de como migrar para UX Design: 5 passos para virar um UX</a></h5>
+                                        </label>
                                         <div class="d-flex">                                             
-                                            <span data-color="#8B18D1"><i class="las la-book-open"></i>Artigo</span> <p class="ml-2">Tema: Migração de Carreira  |  Fonte: Orange Juice  |  Duração: 6 min</p>
+                                            <span class="bdg-artigo"><i class="las la-book-open"></i>Artigo</span> <p class="ml-2">Tema: Migração de Carreira  |  Fonte: Orange Juice  |  Duração: 6 min</p>
                                         </div>
                                     </div>    
                                     <div class="card-item">
-                                        <h5>Guia definitivo de como migrar para UX Design: 5 passos para virar um UX</h5>
+                                        <label class="card-title">
+                                            <input type="checkbox">
+                                            <span class="marcacao">
+                                                <i class="fas fa-check"></i>
+                                            </span>
+                                            <h5><a href="" class="text-dark">Guia definitivo de como migrar para UX Design: 5 passos para virar um UX</a></h5>
+                                        </label>
                                         <div class="d-flex">                                             
                                             <span class="bdg-video"><i class="lab la-youtube"></i>Vídeo</span> <p class="ml-2">Tema: Migração de Carreira  |  Fonte: Orange Juice  |  Duração: 6 min</p>
                                         </div>
