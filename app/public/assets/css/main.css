@@ -1,8 +1,10 @@
 /* Programa de foramção - Novembro 2022 
 - Marcus Paulo Mazza e Cristiano Albino */
 
+/* ---------------------- BIBLIOTECAS*/
 @import url(bootstrap.min.css);
 @import url(fontawesome.css);
+@import url(lineawesome.css);
 
 /* ---------------------- ESTILOS GERAIS*/
 
@@ -253,7 +255,7 @@ a:hover{ text-decoration: none;}
 
 /* ------------- landign-page component */
 .banner-wrapper {
-    background-image: url(../../assets/images/banner-principal.jpg);
+    background-image: url(../../assets/images/institucional/banner-principal.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -323,17 +325,17 @@ a:hover{ text-decoration: none;}
 }
 .section-trail {
     background-color: var(--eighth-color);
-    background-image: url(../../assets/images/banner-trilhas.png);
+    background-image: url(../../assets/images/institucional/banner-trilhas.png);
     background-position: left;   
 }
 .section-discord {
     background-color: var(--sixth-color);  
-    background-image: url(../../assets/images/banner-comunidade.png);
+    background-image: url(../../assets/images/institucional/banner-comunidade.png);
     background-position: right; 
 }
 .section-portfolio {
     background-color: var(--seventh-color);   
-    background-image: url(../../assets/images/banner-portfolio.png);
+    background-image: url(../../assets/images/institucional/banner-portfolio.png);
     background-position: left;   
 }
 .section-content-wrapper {
@@ -365,6 +367,118 @@ a:hover{ text-decoration: none;}
     text-align: center;
 }
 
+
+/* ------------- individual component */
+.trail-head-wrapper {
+    background-color: #fff;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.trail-head-content h1 {
+    font-weight: 700;
+    color: var(--seventh-color);
+    font-size: 2.9rem;
+}
+.trail-head-content p,
+.trail-head-content h5 a {
+    color: var(--eighth-color);
+    font-weight: 600;
+}
+.trail-head-content p {
+    margin-bottom: 0.4rem;
+    font-size: 1.17rem;
+}
+.individual-trail-wrapper {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: var(--third-color);
+    min-height: 50vh;
+}
+.intro-text h3,
+.intro-text p {
+    margin-bottom: 2rem;
+}
+
+.intro-text h3 {
+    color: var(--seventh-color);
+}
+.intro-text p {
+    font-size: 1.3rem;
+}
+.accordion,
+.card,
+.card-header {
+    border: none;
+}
+.accordion {
+    border-radius: 1.3rem;
+    overflow: hidden;
+}
+.accordion .card {
+    border: none;
+    border-radius: none;
+}
+.accordion .card-header,
+.accordion .card-body {
+    background-color: #3a5dca1f;
+}
+.accordion>.card>.card-header {
+    margin-bottom: unset;
+}
+.accordion .card-header {
+    padding: 0.9rem 2.25rem;
+}
+.accordion .card-header h4 {
+    color: var(--eighth-color);
+}
+.accordion .card-header button {
+    border: 2px solid var(--eighth-color);
+    border-radius: 100%;
+    padding: 0;
+    height: 1.5rem;
+    width: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.accordion .card-header button i {
+    color: var(--eighth-color);
+}
+.accordion .card-header button:focus {
+    box-shadow: none !important;
+}
+.accordion .card-body {
+    padding: 0 2.25rem 2.25rem 2.25rem;
+}
+.accordion .card-item:not(:last-child) {
+    margin-bottom: 1.3rem;
+}
+.accordion .card-item span {
+    padding: 0rem 0.6rem;
+    min-width: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    line-height: 0;
+    height: 1.5rem;
+    font-weight: 500;
+ }
+ .accordion .card-item span i {
+    font-size: 1.2rem;
+ }
+ .accordion .card-item p {
+    margin: 0;
+ }
+ .accordion .card-item .bdg-video {
+    border: 1px solid var(--fifth-color);
+    color: var(--fifth-color);
+ }
+ .accordion .card-item .bdg-artigo {
+    border: 1px solid var(--seventh-color);
+    color: var(--seventh-color);
+ }
 
 /* ------------- dashboard component */
 .dashboard-wrapper {
@@ -421,22 +535,22 @@ a:hover{ text-decoration: none;}
     padding-bottom: 3rem;
     background-color: #0c1828;
 }
-    .footer-wrapper .logo-footer {
-        width: 120px;
-        margin-bottom: 1rem;
-    }
-    .footer-wrapper .icon {
-        width: 25px;
-    }
-    .chanels-wrapper li img {
-        margin-right: 0.6rem;
-    }
-    .chanels-wrapper li p strong {
-        color: #FF5A23;
-    }
-    .chanels-wrapper li:not(:last-child){
-        margin-bottom: 0.8rem;
-    }
+.footer-wrapper .logo-footer {
+    width: 120px;
+    margin-bottom: 1rem;
+}
+.footer-wrapper .icon {
+    width: 25px;
+}
+.chanels-wrapper li img {
+    margin-right: 0.6rem;
+}
+.chanels-wrapper li p strong {
+    color: #FF5A23;
+}
+.chanels-wrapper li:not(:last-child){
+    margin-bottom: 0.8rem;
+}
 
 /* ------------- modal component */
 .modal-footer button {

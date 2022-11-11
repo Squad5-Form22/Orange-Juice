@@ -81,5 +81,14 @@ $(function(){
     $('.log-out').on('click', function(e){
         e.preventDefault();
         $('#logout-form').submit();
-    })
+    });
+
+    $('.card-header button').on('click', function() {
+        if( $(this).children().attr('class') == 'fas fa-chevron-right') {
+            $(this).children().attr('class','fas fa-chevron-up');
+        } else {
+            $(this).children().attr('class','fas fa-chevron-right');
+        }
+    });
+
 });
