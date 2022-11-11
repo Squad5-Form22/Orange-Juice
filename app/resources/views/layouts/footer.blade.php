@@ -32,7 +32,7 @@
                             </li>
                             <li>
                                 <a href="" class="d-flex align-items-center">
-                                    <img src="assets/images/institucional/icones/icone_discord.svg" class="icon">
+                                    <img src="assets/images/institucional/icones/icone_youtube.svg" class="icon">
                                     <p class="text-white mb-0">Canal <strong>Orange</strong></p>
                                 </a>
                             </li>

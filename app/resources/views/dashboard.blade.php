@@ -45,7 +45,7 @@
                 </div>
                 <div class="col-11 col-sm-11 col-md-4">
                     <div class="m-3">
-                        <a href="">
+                        <a href="trail">
                             <div class="trail-card-wrapper">
                                 <img src="https://dummyimage.com/1000/ebebeb/707070">
                                 <div class="trail-content-wrapper">
@@ -57,7 +57,7 @@
                 </div>
                 <div class="col-11 col-sm-11 col-md-4">
                     <div class="m-3">
-                        <a href="">
+                        <a href="trail">
                             <div class="trail-card-wrapper">
                                 <img src="https://dummyimage.com/1000/ebebeb/707070">
                                 <div class="trail-content-wrapper">
@@ -82,9 +82,4 @@
             </div>
         </div>
     </div>
-@endsection
-
-{{-- conteúdo do footer --}}
-@section('footer')
-
 @endsection
