@@ -33,7 +33,7 @@ Route::group(['middleware' => 'auth'], function () {
     
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
     
-    Route::get('/trail/{trail_id}', [TrailController::class, 'index'])->name('trail');
+    Route::get('/trail/{trail_id}', [TrailController::class, 'index'])->name('trail.{trail_id}');
 });
 
 Route::group(['middleware' => 'guest'], function () {
@@ -44,10 +44,6 @@ Route::group(['middleware' => 'guest'], function () {
     Route::get('/login', [LoginController::class, 'login'])->name('login.form');
 });
 
-Route::get('/trail', function () {
-    return view('trail');
-});
-
-Route::get('/main-dashboard', function () {
-    return view('dashboard');
-});
+// Route::get('/main-dashboard', function () {
+//     return view('dashboard');
+// });

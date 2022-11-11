@@ -14,8 +14,8 @@ class TrailController extends Controller
 {
     public function index($trail_id) {
         $trail = Trail::with('topics')->findOrFail($trail_id)->toArray();
-        dd($trail);
         // return ['user'=>Auth::user(), 'trail'=>$trail];
+        return view("trail/{$trail_id}")->with(['user'=>Auth::user(), 'trail'=>$trail]);
 
         // $topics = Topic::with('contents')->findOrFail(2)->toArray();
         // return ['topics' => $topics];
