@@ -12,7 +12,7 @@
                     {{-- Marca --}}
                     <div class="mobile-menu-brand">
                         <a href="./">
-                            <img src="/assets/images/institucional/logotipo/logo-orange.png" class="img-fluid" style="width: 60px;">
+                            <img src="/assets/images/logotipo/logo-orange.png" class="img-fluid" style="width: 60px;">
                         </a>
                     </div>
                     {{-- texto --}}
@@ -35,7 +35,7 @@
         <div class="menu-wrapper">
             <div class="brand-wrapper">
                 <a href="./">
-                    <img src="/assets/images/institucional/logotipo/logo-orange.png" class="img-fluid" style="width: 60px;">
+                    <img src="/assets/images/logotipo/logo-orange.png" class="img-fluid" style="width: 60px;">
                 </a>
             </div>
             <div class="menu-content-wrapper">

@@ -13,7 +13,7 @@
                     <div class="register-content-wrapper bg-light">
                         <div class="mb-3 d-flex justify-content-center">
                             <a href="./">
-                                <img src="/assets/images/institucional/logotipo/logo-orange.png" class="img-fluid" style="width: 160px;">
+                                <img src="/assets/images/logotipo/logo-orange.png" class="img-fluid" style="width: 160px;">
                             </a>
                         </div>
                         <div class="title-wrapper mb-3">
