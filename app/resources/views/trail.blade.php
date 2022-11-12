@@ -77,7 +77,7 @@
                                     @foreach($topic['contents'] as $content)
                                     <div class="card-item">
                                         <label class="card-title">
-                                            <input type="checkbox" checked>
+                                            <input type="checkbox">
                                             <span class="marcacao">
                                                 <i class="fas fa-check"></i>
                                             </span>
@@ -98,3 +98,9 @@
         </div>
     </div>
 @endsection
+
+{{-- conteúdo do footer --}}
+@section('footer')
+    @include('layouts/footer')
+@endsection
+
