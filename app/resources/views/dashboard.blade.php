@@ -43,42 +43,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-11 col-sm-11 col-md-4">
-                    <div class="m-3">
-                        <a href="trail">
-                            <div class="trail-card-wrapper">
-                                <img src="assets/images/trilhas/trilha_ux-ui-design.png">
-                                <div class="trail-content-wrapper">
-                                    <h4>UX / UI Design</h4>
-                                </div>
+                    @foreach($trails as $trail)
+                        <div class="col-11 col-sm-11 col-md-4">
+                            <div class="m-3">
+                                <a href="/trail/{{ $trail->id }}">
+                                    <div class="trail-card-wrapper">
+                                        <img src="assets/images/trilhas/trilha_{{ $trail->name }}.png">
+                                        <div class="trail-content-wrapper">
+                                            <h4>{{ $trail->name }}</h4>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-11 col-sm-11 col-md-4">
-                    <div class="m-3">
-                        <a href="trail">
-                            <div class="trail-card-wrapper">
-                                <img src="assets/images/trilhas/trilha_fullstack.png">
-                                <div class="trail-content-wrapper">
-                                    <h4>Desenvolvimento Full Stack</h4>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-11 col-sm-11 col-md-4">
-                    <div class="m-3">
-                        <a href="trail">
-                            <div class="trail-card-wrapper">
-                                <img src="assets/images/trilhas/trilha_quality-assurance.png">
-                                <div class="trail-content-wrapper">
-                                    <h4>Quality Assurance</h4>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+                        </div>
+                    @endforeach
             </div>
         </div>
     </div>

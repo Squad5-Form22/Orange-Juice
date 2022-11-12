@@ -1,3 +1,6 @@
+
+
+
 <?php
 
 use Illuminate\Database\Migrations\Migration;
@@ -13,8 +16,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('trail_models', function (Blueprint $table) {
-            $table->id();
+        Schema::dropIfExists('user_completed_contents');
+        Schema::create('user_completed_contents', function (Blueprint $table) {
+            $table->increments('id');
             $table->timestamps();
         });
     }
@@ -26,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('trail_models');
+        Schema::dropIfExists('user_completed_contents');
     }
 };

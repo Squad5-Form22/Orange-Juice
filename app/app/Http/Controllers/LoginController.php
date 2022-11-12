@@ -25,9 +25,9 @@ class loginController extends Controller
                 return redirect()->intended('admin/dashboard');
             } else if (Auth::user()->status === 1 && Auth::user()->role === 'common'){
                 $request->session()->regenerate();
-                return redirect()->intended('home');
+                return redirect()->intended('dashboard');
             } else {
-                return redirect()->route('/')->with(['message' => 'Usuário inválido']);
+                return redirect()->route('/login')->with(['message' => 'Usuário inválido']);
             }
         }
 
