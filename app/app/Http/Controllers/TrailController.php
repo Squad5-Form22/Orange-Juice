@@ -14,10 +14,12 @@ class TrailController extends Controller
 {
     public function index($trail_id) {
         $trail = Trail::with('topics')->findOrFail($trail_id)->toArray();
-        // return ['user'=>Auth::user(), 'trail'=>$trail];
-        return view("trail/{$trail_id}")->with(['user'=>Auth::user(), 'trail'=>$trail]);
+        $topics_contents = array();
+        foreach($trail['topics'] as $topic) {
+            $contents = Topic::with('contents')->findOrFail($topic['id'])->toArray();
+            array_push($topics_contents, $contents);
+        }
 
-        // $topics = Topic::with('contents')->findOrFail(2)->toArray();
-        // return ['topics' => $topics];
+        return view('trail')->with(['user'=>Auth::user(), 'trail'=>$trail, 'topics_contents'=>$topics_contents]);
     }
 }

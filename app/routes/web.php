@@ -33,7 +33,7 @@ Route::group(['middleware' => 'auth'], function () {
     
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
     
-    Route::get('/trail/{trail_id}', [TrailController::class, 'index'])->name('trail.{trail_id}');
+    Route::get('/trail/{trail_id}', [TrailController::class, 'index'])->name('trail');
 });
 
 Route::group(['middleware' => 'guest'], function () {
