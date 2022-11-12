@@ -97,6 +97,7 @@ $(function(){
     //     $(this).next().children().css('display','block');  
     // }
 
+
     $('.marcacao').on('click', function(){
         var d = $(this).children().css('display');
         $(this).css('background-color', '#02C09B');
