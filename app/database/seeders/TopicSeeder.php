@@ -18,27 +18,21 @@ class TopicSeeder extends Seeder
         $topics = [
                 [
                     'name' => 'inicio',
-                    // 'trail_id' => rand(1, 3)
                 ],
                 [
                     'name' => 'basico',
-                    // 'trail_id' => rand(1, 3)
                 ],
                 [
                     'name' => 'basico developer',
-                    // 'trail_id' => rand(1, 3)
                 ],
                 [
                     'name' => 'intermediario developer',
-                    // 'trail_id' => rand(1, 3)
                 ],
                 [
                     'name' => 'basico ux',
-                    // 'trail_id' => rand(1, 3)
                 ],
                 [
                     'name' => 'avançado qa',
-                    // 'trail_id' => rand(1, 3)
                 ],
         ];
 

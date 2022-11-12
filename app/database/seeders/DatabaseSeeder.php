@@ -27,6 +27,6 @@ class DatabaseSeeder extends Seeder
         $this->call(TopicSeeder::class);
         $this->call(ContentSeeder::class);
         $this->call(TopicTrailSeeder::class);
-        // $this->call(TopicToContentsSeeder::class);
+        $this->call(ContentUserSeeder::class);
     }
 }
