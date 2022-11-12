@@ -24,20 +24,20 @@ Route::get('/', function () {
 
 Route::group(['middleware' => 'isAdmin'], function () {
     Route::get('/admin/dashboard', DashboardAdmin::class)->name('admin.dashboard');
-    Route::post('/logout', [loginController::class, 'logout'])->name('logout');
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 });
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', DashboardCommon::class)->name('home');
-    Route::post('/logout', [loginController::class, 'logout'])->name('logout');
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 });
 
 Route::group(['middleware' => 'guest'], function () {
     Route::get('/register', [RegisterController::class, 'create']);
     Route::post('/register', [RegisterController::class, 'store'])->name('register');
 
-    Route::post('/login', [loginController::class, 'signin'])->name('login');
-    Route::get('/login', [loginController::class, 'login'])->name('login.form');
+    Route::post('/login', [LoginController::class, 'signin'])->name('login');
+    Route::get('/login', [LoginController::class, 'login'])->name('login.form');
 });
 
 Route::get('/trail', function () {
