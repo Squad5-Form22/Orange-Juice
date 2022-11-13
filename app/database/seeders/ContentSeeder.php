@@ -17,11 +17,13 @@ class ContentSeeder extends Seeder
     {
         $contents = [
             [
-                'name' => 'linkedin',
+                'name' => 'LinkedIn',
                 'author' => 'fulano',
                 'url' => 'https://google.com',
                 'type' => 'video', 
                 'topic_id' => rand(1,5),
+                'theme' => 'Migração de Carreira',
+                'duration' => '00:00:05'
             ],
             [
                 'name' => 'curriculo matador',
@@ -29,20 +31,26 @@ class ContentSeeder extends Seeder
                 'url' => 'https://google.com',
                 'type' => 'video',
                 'topic_id' => rand(1,5),
+                'theme' => 'Migração de Carreira',
+                'duration' => '00:20:00'
             ],
             [
-                'name' => 'html',
+                'name' => 'HTML',
                 'author' => 'fulano',
                 'url' => 'https://google.com',
                 'type' => 'video',
                 'topic_id' => rand(1,5),
+                'theme' => 'Desenvolvimento',
+                'duration' => '00:40:35'
             ],
             [
-                'name' => 'css',
+                'name' => 'CSS',
                 'author' => 'fulano',
                 'url' => 'https://google.com',
                 'type' => 'video',
                 'topic_id' => rand(1,5),
+                'theme' => 'Desenvolvimento',
+                'duration' => '02:00:00'
             ],
             [
                 'name' => 'PHP',
@@ -50,6 +58,8 @@ class ContentSeeder extends Seeder
                 'url' => 'https://google.com',
                 'type' => 'video',
                 'topic_id' => rand(1,5),
+                'theme' => 'Desenlvimento',
+                'duration' => '01:00:00'
             ],
             [
                 'name' => 'Figma',
@@ -57,6 +67,8 @@ class ContentSeeder extends Seeder
                 'url' => 'https://google.com',
                 'type' => 'video',
                 'topic_id' => rand(1,5),
+                'theme' => 'UX Desing',
+                'duration' => '01:30:00'
             ]
         ];
 

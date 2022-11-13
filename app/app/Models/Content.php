@@ -16,9 +16,12 @@ class Content extends Model
      */
 
     protected $fillable = [
+        'name',
+        'theme',
+        'duration',
+        'url',
         'author',
         'type',
-        'url',
         'status',
         'topic_id'
     ];

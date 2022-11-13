@@ -20,6 +20,8 @@ return new class extends Migration
             $table->increments('id');
             $table->string('name')->unique();
             $table->string('author');
+            $table->string('theme', 50);
+            $table->string('duration', 8);
             $table->String('type');
             $table->String('url');
             $table->boolean('status')->default(true);
