@@ -18,12 +18,15 @@ class TrailSeeder extends Seeder
         $trails = [
             [
                 'name' => 'ux',
+                'description' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
             ],
             [
                 'name' => 'qa',
+                'description' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
             ],
             [
                 'name' => 'developer',
+                'description' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
             ]
         ];
 

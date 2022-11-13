@@ -42,4 +42,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function contents() {
+        return $this->belongsToMany(
+            Content::class,
+            'content_users',
+            'user_id',
+            'content_id',
+        );
+    }
 }

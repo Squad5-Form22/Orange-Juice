@@ -16,6 +16,7 @@ class Trail extends Model
      */
     protected $fillable = [
         'name',
+        'description',
         'status',
     ];
 

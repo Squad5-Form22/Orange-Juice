@@ -17,12 +17,13 @@ return new class extends Migration
         Schema::create('trails', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->unique();
+            $table->string('description', 200);
             $table->boolean('status')->default(true);
             $table->timestamps();
         });
     }
 
-    /**
+    /** 
      * Reverse the migrations.
      *
      * @return void
