@@ -6,4 +6,17 @@ $(function(){
             url: '/content/'+id,
         });
     });
+    $('.card-title a').on('click', function() {
+        
+        let id = $(this).prev().attr('id');
+        let status = $(this).prev().val();
+
+       if(status != '1'){
+            $.ajax({
+                method: "GET",
+                url: '/content/'+id,
+            });
+            location.reload();
+        }
+    });
 })

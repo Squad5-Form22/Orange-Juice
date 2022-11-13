@@ -80,13 +80,8 @@
                                     @foreach($topic['contents'] as $content)
                                     <div class="card-item">
                                         <label class="card-title">
-                                            @if($content['status'] == '1')
-                                                <form><input id="{{ $content['id'] }}" type="checkbox" class="mr-2" checked></form>
-                                            @else 
-                                            <form><input id="{{ $content['id'] }}" type="checkbox" class="mr-2"></form>
-                                            @endif   
-
-                                            <h5><a href="" class="text-dark">{{$content['name']}}</a></h5>
+                                            <input id="{{ $content['id'] }}" type="checkbox" class="mr-2"  @checked($content['status'] == '1') value="{{$content['status']}}" >
+                                            <a href="https://www.google.com.br/" class="text-dark" target="_blank"><h5>{{$content['name']}}</h5></a>
                                         </label>
                                         <div class="d-flex">                                             
                                             <span class="bdg-artigo"><i class="las la-book-open"></i> Artigo</span><p class="ml-2">Tema: Migração de Carreira  |  Fonte: Orange Juice  |  Duração: 6 min</p>
@@ -103,7 +98,6 @@
         </div>
     </div>
 @endsection
-
 
  
 {{-- conteúdo do footer --}}
