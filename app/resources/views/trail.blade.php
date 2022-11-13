@@ -56,35 +56,40 @@
             <div class="row no-gutters">
                 <div class="col-12">
                     <div class="intro-text">
-                        <h3>Se você chegou até aqui, é porque quer aprender mais sobre tecnologia, especialmente sobre <strong>Desenvolvimento Full Stack</strong>!</h3>
+                        <h3>Se você chegou até aqui, é porque quer aprender mais sobre tecnologia, especialmente sobre <strong>{{ $trail['name'] }}</strong>!</h3>
                         <p>Essa trilha foi montada pensando em quem está começando na área, ou passando por uma migração de carreira e ainda não sabe exatamente o que é esse mundo. Então, aperta o cinto e vem com a gente nessa jornada!</p>
                     </div>
                 </div>
+
                 <div class="col-12">
                     @foreach($topics_contents as $topic)
-                    <div class="accordion mb-3" id="{{ $topic['name'] }}">
+                    <div class="accordion mb-3" id="accordion{{ $topic['name'] }}">
+                        
+                     
                         <div class="card">
                             <div class="card-header" id="heading{{ $topic['name'] }}">
                                 <div class="mb-0 d-flex align-items-center justify-content-between">
                                     <h4 class="d-inline mb-0"><strong>{{ $topic['name'] }}</strong></h4>
-                                    <button class="btn" type="button" data-toggle="collapse" data-target="#{{ $topic['name'] }}" aria-expanded="true" aria-controls="collapseOne">
+                                    <button class="btn" type="button" data-toggle="collapse" data-target="#collapse{{ $topic['name'] }}" aria-expanded="true" aria-controls="collapse{{ $topic['name'] }}">
                                         <i class="fas fa-chevron-right"></i>
                                     </button>
                                 </div>
                             </div>
-                            <div id="{{ $topic['name'] }}" class="collapse" aria-labelledby="heading{{ $topic['name'] }}" data-parent="#{{ $topic['name'] }}">
+                            <div id="collapse{{ $topic['name'] }}" class="collapse" aria-labelledby="heading{{ $topic['name'] }}" data-parent="#accordion{{ $topic['name'] }}">
                                 <div class="card-body">
                                     @foreach($topic['contents'] as $content)
                                     <div class="card-item">
                                         <label class="card-title">
-                                            <input type="checkbox">
-                                            <span class="marcacao">
-                                                <i class="fas fa-check"></i>
-                                            </span>
-                                            <h5><a href="" class="text-dark">Guia definitivo de como migrar para UX Design: 5 passos para virar um UX</a></h5>
+                                            @if($content['status'] == '1')
+                                                <form><input id="{{ $content['id'] }}" type="checkbox" class="mr-2" checked></form>
+                                            @else 
+                                            <form><input id="{{ $content['id'] }}" type="checkbox" class="mr-2"></form>
+                                            @endif   
+
+                                            <h5><a href="" class="text-dark">{{$content['name']}}</a></h5>
                                         </label>
                                         <div class="d-flex">                                             
-                                            <span class="bdg-artigo"><i class="las la-book-open"></i>{{$content['name']}}</span> <p class="ml-2">Tema: Migração de Carreira  |  Fonte: Orange Juice  |  Duração: 6 min</p>
+                                            <span class="bdg-artigo"><i class="las la-book-open"></i> Artigo</span><p class="ml-2">Tema: Migração de Carreira  |  Fonte: Orange Juice  |  Duração: 6 min</p>
                                         </div>
                                     </div>
                                     @endforeach              
@@ -99,6 +104,8 @@
     </div>
 @endsection
 
+
+ 
 {{-- conteúdo do footer --}}
 @section('footer')
     @include('layouts/footer')

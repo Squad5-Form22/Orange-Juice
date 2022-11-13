@@ -43,20 +43,20 @@
                         </div>
                     </div>
                 </div>
-                    @foreach($trails as $trail)
-                        <div class="col-11 col-sm-11 col-md-4">
-                            <div class="m-3">
-                                <a href="/trail/{{ $trail->id }}">
-                                    <div class="trail-card-wrapper">
-                                        <img src="assets/images/trilhas/trilha_{{ $trail->name }}.png">
-                                        <div class="trail-content-wrapper">
-                                            <h4>{{ $trail->name }}</h4>
-                                        </div>
+                @foreach($trails as $trail)
+                    <div class="col-11 col-sm-11 col-md-4">
+                        <div class="m-3">
+                            <a href="/trail/{{ $trail->id }}">
+                                <div class="trail-card-wrapper">
+                                    <img src="assets/images/trilhas/trilha_{{ $trail->name }}.png">
+                                    <div class="trail-content-wrapper">
+                                        <h4>{{ $trail->name }}</h4>
                                     </div>
-                                </a>
-                            </div>
+                                </div>
+                            </a>
                         </div>
-                    @endforeach
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>
