@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TrailController;
+use App\Http\Controllers\ContentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,6 +45,4 @@ Route::group(['middleware' => 'guest'], function () {
     Route::get('/login', [LoginController::class, 'login'])->name('login.form');
 });
 
-// Route::get('/main-dashboard', function () {
-//     return view('dashboard');
-// });
+Route::get('/content/{id}', [ContentController::class, 'updateContentStatus'])->name('updateContentStatus');

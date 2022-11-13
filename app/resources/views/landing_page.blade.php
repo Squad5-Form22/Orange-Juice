@@ -53,68 +53,64 @@
         <div class="container">
             <div class="row no-gutters">
                 <div class="col-12">
-                    <div class="my-3">
-                        <div class="section-trail">
-                            <div class="row no-gutters section-content-wrapper">                        
-                                <div class="col-lg-5">
-                                    <div class="btn-wrapper">
-                                        <a href="" class="btn btn-secondary w-75">Iniciar Trilha</a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-7">
-                                    <div class="content-wrapper">
-                                        <div class="content">
-                                            <h2>Inicie uma Nova Carreira</h2>
-                                            <p>Quer ingressar na área tech e não sabe por onde começar?</p>
-                                            <p>Aprenda com <strong>conteúdos gratuitos</strong> de qualidade!</p>
-                                        </div>
-                                    </div>
+                    <div class="card trail-color">
+                        <div class="card-wrapper no-gutters">
+                          <div class="col-md-7">
+                            <div class="card-body">
+                                <div class="card-content">
+                                    <h2>Inicie uma Nova Carreira</h2>
+                                    <p>Quer ingressar na área tech e não sabe por onde começar?</p>
+                                    <p>Aprenda com <strong>conteúdos gratuitos</strong> de qualidade!</p>
                                 </div>
                             </div>
+                          </div>
+                          <div class="col-md-5">
+                            <div class="img-card">
+                                <img src="assets/images/institucional/banner-trilhas.png" class="img-fluid">
+                                <a href="" class="btn btn-secondary">Iniciar Trilha</a>
+                            </div>
+                          </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-12">
-                    <div class="my-3">
-                        <div class="section-discord">
-                            <div class="row no-gutters section-content-wrapper">                        
-                                <div class="col-12 col-lg-7">
-                                    <div class="content-wrapper">
-                                        <div class="content">
-                                            <h2>Junte-se à Comunidade Orange</h2>
-                                            <p><strong>Amplie seu networking.</strong></p>
-                                            <p>Faça amigos e interaja com profissionais da área tech.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-5">
-                                    <div class="btn-wrapper">
-                                        <a href="" class="btn btn-secondary w-75">Acesse o Discord</a>
-                                    </div>
+                    <div class="card comunity-color">
+                        <div class="card-wrapper no-gutters">
+                          <div class="col-md-5">
+                            <div class="img-card">
+                                <img src="assets/images/institucional/banner-comunidade.png" class="img-fluid">
+                                <a href="" class="btn btn-secondary">Acesse o Discord</a>
+                            </div>
+                          </div>
+                          <div class="col-md-7">
+                            <div class="card-body">
+                                <div class="card-content">
+                                    <h2>Junte-se à Comunidade Orange</h2>
+                                    <p><strong> Amplie seu networking.</strong> Faça amigos e interaja com profissionais da área tech.</p>
                                 </div>
                             </div>
+                          </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-12">
-                    <div class="my-3">
-                        <div class="section-portfolio">
-                            <div class="row no-gutters section-content-wrapper"> 
-                                <div class="col-lg-5">
-                                    <div class="btn-wrapper">
-                                        <a href="" class="btn btn-secondary w-75">Iniciar Trilha</a>
-                                    </div>
-                                </div>                       
-                                <div class="col-lg-7">
-                                    <div class="content-wrapper">
-                                        <div class="content">
-                                            <h2>Turbine o seu portfólio</h2>
-                                            <p>Coloque a mão na massa!</p>
-                                            <p><strong>Encare nossos desafios</strong> e concorra a prêmios!</p>
-                                        </div>
-                                    </div>
-                                </div>  
+                    <div class="card portfólio-color">
+                        <div class="card-wrapper no-gutters">
+                          <div class="col-md-7">
+                            <div class="card-body">
+                                <div class="card-content">
+                                    <h2>Turbine o seu portfólio</h2>
+                                    <p>Coloque a mão na massa!</p>
+                                    <p><strong>Use toda a sua criatividade.</strong> Encare nossos desafios e concorra a prêmios!</p>
+                                </div>
                             </div>
+                          </div>
+                          <div class="col-md-5">
+                            <div class="img-card">
+                                <img src="assets/images/institucional/banner-portfolio.png" class="img-fluid">
+                                <a href="" class="btn btn-secondary">Veja a Programação</a>
+                            </div>
+                          </div>
                         </div>
                     </div>
                 </div>
@@ -127,4 +123,3 @@
 @section('footer')
     @include('layouts/footer')
 @endsection
-

@@ -6,7 +6,7 @@
                     {{-- top - trigger pra fechar --}}
                     <div class="mobile-menu-top">
                         <div class="mobile-trigger">
-                            <i class="fa-regular fa-circle-xmark"></i>
+                            <i class="las la-times-circle"></i>
                         </div>
                     </div>
                     {{-- Marca --}}
@@ -43,7 +43,7 @@
                     @yield('menu-content')  
                 </ul>
                 <div class="mobile-trigger">
-                    <i class="fa-solid fa-bars"></i>
+                    <i class="las la-bars"></i>
                 </div>
             </div>
         </div>

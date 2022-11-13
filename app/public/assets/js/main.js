@@ -13,9 +13,11 @@ $(function(){
     });
     
     /*-- navbar mobile --*/
+    var tela = $(window).width();
+
     $('.mobile-trigger i').on('click', function(e) {
         $('.mobile-menu-wrapper').css('transform', 'translate(0%)');
-        if(e.target.className != 'fa-solid fa-bars'){
+        if(e.target.className != 'las la-bars'){
             $('.mobile-menu-wrapper').css('transform', 'translate(-100%)');
         }
     });
@@ -90,30 +92,6 @@ $(function(){
             $(this).children().attr('class','fas fa-chevron-right');
         }
     });
-   
-    // if( $('input[type="checkbox"]').prop('checked')) {
-    //     $(this).next().css('background-color', '#02C09B');
-    //     $(this).next().css('border','1px solid #02C09B');
-    //     $(this).next().children().css('display','block');  
-    // }
 
-    $('.marcacao').on('click', function(){
-        var d = $(this).children().css('display');
-        $(this).css('background-color', '#02C09B');
-        $(this).css('border','1px solid #02C09B');
-        $(this).children().css('display', 'block');
-        if(d == 'block') {
-            $(this).css('background-color', '#eee');
-            $(this).css('border','1px solid #bdb7b7');
-            $(this).children().css('display', 'none');
-        }
-    });
-
-    /*-- Checkbox Customizado  (quando clica no link) --*/
-    $('.card-title a').on('click', function(e){
-        $(this).parent().prev().css('background-color', '#02C09B');
-        $(this).parent().prev().css('border','1px solid #02C09B');
-        $(this).parent().prev().children().css('display','block');
-    });
 
 });
