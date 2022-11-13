@@ -15,11 +15,7 @@ class ContentController extends Controller
         $current_user = Auth::user();
         $completed_content = new ContentUser;
 
-        // $result = ContentUser::whereRaw('content_id = ? and user_id = ?', [$content_id, $current_user->id])->get()->toArray();
-
         $result = ContentUser::whereRaw('content_id = ? and user_id = ?', [$content_id, $current_user->id])->delete();
-        
-        // dd($result);
         
         if($result == 0) {
             $completed_content = new ContentUser;
@@ -28,9 +24,6 @@ class ContentController extends Controller
             
             $completed_content->save();
         }
-        
-
-        // dd($completed_content);
 
         return $completed_content;
     }

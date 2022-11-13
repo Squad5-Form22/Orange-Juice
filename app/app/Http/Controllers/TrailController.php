@@ -31,8 +31,6 @@ class TrailController extends Controller
             array_push($completed_contents_id, $content['id']);
         }
 
-        // dd($completed_contents_id);
-
         return view('trail')->with([
             'user'=>$current_user,
             'trail'=>$trail,
