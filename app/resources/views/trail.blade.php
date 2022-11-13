@@ -30,6 +30,12 @@
     @endsection
 @endsection
 
+<ul>
+@foreach($completed_contents_id as $content_id)
+    <li>{{$content_id}}</li>
+@endforeach
+</ul>
+
 {{-- conteúdo principal --}}
 @section('conteudo')
     <div class="trail-head-wrapper">
@@ -80,7 +86,7 @@
                                     @foreach($topic['contents'] as $content)
                                     <div class="card-item">
                                         <label class="card-title">
-                                            <input id="{{ $content['id'] }}" type="checkbox" class="mr-2"  @checked($content['status'] == '1') value="{{$content['status']}}" >
+                                            <input id="{{ $content['id'] }}" type="checkbox" class="mr-2" @if(in_array($content['id'], $completed_contents_id)) checked @endif value="{{$content['status']}}" >
                                             <a href="https://www.google.com.br/" class="text-dark" target="_blank"><h5>{{$content['name']}}</h5></a>
                                         </label>
                                         <div class="d-flex">                                             
@@ -104,4 +110,3 @@
 @section('footer')
     @include('layouts/footer')
 @endsection
-

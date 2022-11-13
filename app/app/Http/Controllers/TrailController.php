@@ -25,11 +25,19 @@ class TrailController extends Controller
 
         $completed_contents = User::with('contents')->findOrFail($current_user->id)->toArray();
 
+        $completed_contents_id = array();
+
+        foreach($completed_contents['contents'] as $content){
+            array_push($completed_contents_id, $content['id']);
+        }
+
+        // dd($completed_contents_id);
+
         return view('trail')->with([
             'user'=>$current_user,
             'trail'=>$trail,
             'topics_contents'=>$topics_contents,
-            'completed_contents'=>$completed_contents
+            'completed_contents_id'=>$completed_contents_id
         ]);
     }
 }

@@ -35,6 +35,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
     
     Route::get('/trail/{trail_id}', [TrailController::class, 'index'])->name('trail');
+
+    Route::get('/content/{id}', [ContentController::class, 'updateContentStatus'])->name('updateContentStatus');
 });
 
 Route::group(['middleware' => 'guest'], function () {
@@ -44,5 +46,3 @@ Route::group(['middleware' => 'guest'], function () {
     Route::post('/login', [LoginController::class, 'signin'])->name('login');
     Route::get('/login', [LoginController::class, 'login'])->name('login.form');
 });
-
-Route::get('/content/{id}', [ContentController::class, 'updateContentStatus'])->name('updateContentStatus');
