@@ -30,12 +30,6 @@
     @endsection
 @endsection
 
-<ul>
-@foreach($completed_contents_id as $content_id)
-    <li>{{$content_id}}</li>
-@endforeach
-</ul>
-
 {{-- conteúdo principal --}}
 @section('conteudo')
     <div class="trail-head-wrapper">
