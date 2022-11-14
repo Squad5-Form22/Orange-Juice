@@ -78,7 +78,7 @@
                                     <div class="card-item">
                                         <label class="card-title">
                                             <input id="{{ $content['id'] }}" type="checkbox" class="mr-2" @if(in_array($content['id'], $completed_contents_id)) checked @endif value="{{$content['status']}}" >
-                                            <a href="https://www.google.com.br/" class="text-dark" target="_blank"><h5>{{$content['name']}}</h5></a>
+                                            <a href="{{ $content['url'] }}" class="text-dark" target="_blank"><h5>{{$content['name']}}</h5></a>
                                         </label>
                                         <div class="d-flex">                                             
                                             <span class="bdg-artigo bdg"><i class="las la-book-open"></i> {{ $content['type']}}</span><p class="ml-2">Tema: {{ $content['theme'] }}  |  Fonte: {{ $content['author'] }}  |  Duração: {{ $content['duration'] }}</p>
