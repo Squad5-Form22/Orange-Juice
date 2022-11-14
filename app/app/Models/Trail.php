@@ -28,4 +28,30 @@ class Trail extends Model
             'topic_id',
         );
     }
+
+    static function getAll(){
+        $data = User::get();
+        return $data;
+    }
+
+    static function getOne($id){
+        $data = Trail::where('id',$id)->get();
+        return $data;
+    }
+
+    static function saveOne($data){
+        $result = Trail::create($data);
+        return $result;
+    }
+
+    static function updateOne($data, $id) {
+        $trail = Trail::findOrFail($id);
+        $result = $trail->update($data);
+        return $result;
+    }
+
+    static function deleteOne($id){
+        $result = Trail::where('id',$id)->delete();
+        return $result;
+    }
 }
