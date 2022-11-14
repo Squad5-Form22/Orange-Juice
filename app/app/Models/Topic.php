@@ -32,4 +32,30 @@ class Topic extends Model
             'trail_id',
         );
     }
+
+    static function getAll(){
+        $data = Topic::get();
+        return $data;
+    }
+
+    static function getOne($id){
+        $data = Topic::where('id',$id)->get();
+        return $data;
+    }
+
+    static function saveOne($data){
+        $result = Topic::create($data);
+        return $result;
+    }
+
+    static function updateOne($data, $id = null) {
+        $topic = Topic::findOrFail($id);        
+        $result = $topic->update($data);
+        return $result;
+    }
+
+    static function deleteOne($id){
+        $result = Topic::where('id',$id)->delete();
+        return $result;
+    }
 }
