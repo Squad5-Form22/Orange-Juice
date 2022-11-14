@@ -62,17 +62,17 @@
 
                 <div class="col-12">
                     @foreach($topics_contents as $topic)
-                    <div class="accordion mb-3" id="accordion{{ $topic['name'] }}">
+                    <div class="accordion mb-3" id="accordion{{ $topic['id'] }}">
                         <div class="card">
-                            <div class="card-header" id="heading{{ $topic['name'] }}">
+                            <div class="card-header" id="heading{{ $topic['id'] }}">
                                 <div class="mb-0 d-flex align-items-center justify-content-between">
                                     <h4 class="d-inline mb-0"><strong>{{ $topic['name'] }}</strong></h4>
-                                    <button class="btn" type="button" data-toggle="collapse" data-target="#collapse{{ $topic['name'] }}" aria-expanded="true" aria-controls="collapse{{ $topic['name'] }}">
+                                    <button class="btn" type="button" data-toggle="collapse" data-target="#collapse{{ $topic['id'] }}" aria-expanded="true" aria-controls="collapse{{ $topic['id'] }}">
                                         <i class="fas fa-chevron-right"></i>
                                     </button>
                                 </div>
                             </div>
-                            <div id="collapse{{ $topic['name'] }}" class="collapse" aria-labelledby="heading{{ $topic['name'] }}" data-parent="#accordion{{ $topic['name'] }}">
+                            <div id="collapse{{ $topic['id'] }}" class="collapse" aria-labelledby="heading{{ $topic['id'] }}" data-parent="#accordion{{ $topic['id'] }}">
                                 <div class="card-body">
                                     @foreach($topic['contents'] as $content)
                                     <div class="card-item">
