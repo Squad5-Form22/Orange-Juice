@@ -170,23 +170,30 @@ a:hover{ text-decoration: none;}
 }
 .mobile-menu-brand {
     display: flex; 
+    justify-content: center;
 }
 .mobile-menu-brand, 
 .mobile-menu-intro {
     width: 100%;
     margin-bottom: 1.8rem;
 }
-.mobile-menu-brand {
-    justify-content: center;
+.mobile-menu-brand img {
+    width: 120px;
 }
 .mobile-menu-intro h4,
 .mobile-menu-intro h5 {
     text-align: center;
     color:var(--third-color);
 }
+.mobile-menu-intro h5 {
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+.mobile-menu-content li {
+    margin-bottom: 0.7rem;
+}
 .mobile-menu-content li a {
-    min-width: 8rem;
-    border-radius: 3rem;
+    color: #fff;
 }
 
 
@@ -228,6 +235,7 @@ a:hover{ text-decoration: none;}
 .title-wrapper h5 {
     color: var(--eighth-color);
 }
+
 
 /* ------------- form component */
 .form-content-wrapper .form-control,
@@ -415,6 +423,7 @@ a:hover{ text-decoration: none;}
     font-size: 1.3rem;
 }
 
+
 /* ------------- individual component */
 .trail-head-wrapper {
     background-color: #fff;
@@ -512,6 +521,8 @@ a:hover{ text-decoration: none;}
    margin-bottom: 0.5rem;
 }
 
+
+
 /*--------------- badge component */
 .bdg {
     padding: 0rem 0.6rem;
@@ -543,6 +554,7 @@ a:hover{ text-decoration: none;}
     color: var(--seventh-color);
 }
 
+
 /* ------------- events component */
 .events-wrapper {
     height: 80vh;
@@ -566,12 +578,74 @@ a:hover{ text-decoration: none;}
     font-weight: 400;
     margin-bottom: 3.2rem;
 }
-
+.event-wrapper {
+    border-bottom: 1px solid gainsboro;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.event-cel {
+    min-height: 170px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+.img-cel-box {
+    max-height: 165px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.8rem;
+}
+.img-cel-box img {
+    height: auto;
+    width: 255px;
+}
+.event-data {
+    text-align: center;
+}
+.event-data h1,
+.event-description h3,
+.event-data h4,
+.event-description h5,
+.event-data h5 {
+    margin: 0;
+}
+.event-data h5 {
+    font-size: 1.05rem;
+}
+.event-description h5 {
+    font-weight: 400;
+}
+.event-description h3,
+.event-data h1 {
+    font-weight: 600;
+}
+.event-description h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+.event-data span {
+    margin-top: 2rem;
+}
+.btn-area a {
+    width: 100%;
+    padding: 0.75rem;
+}
+.btn-area a:first-child {
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+.btn-area .btn-secondary,
+.btn-area .btn-secondary:hover {
+    border: 2px solid var(--eighth-color);
+}
 
 /* ------------- user component */
 .user-wrapper {
     height: 80vh;
 }
+
 
 /* ------------- footer component */
 .footer-wrapper {
@@ -623,7 +697,7 @@ a:hover{ text-decoration: none;}
 
     /* -- Banner --*/
     .banner-wrapper {
-        height: 50vh;
+        height: 56vh;
         position: relative;
     }
     .banner-content-wrapper {
@@ -631,7 +705,7 @@ a:hover{ text-decoration: none;}
         position: absolute;
         left: 0;
         right: 0;
-        bottom: -234px;
+        bottom: -217px;
         margin: auto 15px;
     }
     .banner-content {
@@ -682,6 +756,51 @@ a:hover{ text-decoration: none;}
     .landing-content .card-content p:last-child {
         margin: 0;
     }
+
+    /* ------------- events component */
+    .events-wrapper {
+        min-height: 175vh;
+    }
+    .events-title h2 {
+        color: var(--eighth-color);
+        margin-bottom: 0.8rem;
+        font-size: 2rem;
+    }
+    .events-title h3 {
+        font-weight: 400;
+        margin-bottom: 1.2rem;
+        font-size: 1.3rem;
+    }
+    .event-cel {
+        min-height: 115px;
+        align-items: center;
+    }
+    .img-cel-box {
+        align-items: flex-start;
+        max-height: 240px;
+        width: 100%;
+    }
+    .img-cel-box img {
+        width: 100%;
+    }
+    .event-data {
+        width: 100%;
+    }
+    .event-data h1,
+    .event-data h4 {
+        display: inline;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    .event-data span {
+        margin: 0.7rem  auto 0;
+    }
+    .event-description {
+        text-align: center;
+        width: 85%;
+        margin-bottom: 1rem;
+    }
+
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
     .login-wrapper,
@@ -728,6 +847,7 @@ a:hover{ text-decoration: none;}
         font-size: 1.4rem;
     }
     
+
     /* -- Landing Page --*/
     .landing-content {
         padding-top: 16rem;
@@ -765,6 +885,50 @@ a:hover{ text-decoration: none;}
         margin: 0;
     }
 
+
+    /* ------------- events component */
+    .events-wrapper {
+        min-height: 175vh;
+    }
+    .events-title h2 {
+        color: var(--eighth-color);
+        margin-bottom: 0.8rem;
+        font-size: 2rem;
+    }
+    .events-title h3 {
+        font-weight: 400;
+        margin-bottom: 1.2rem;
+        font-size: 1.3rem;
+    }
+    .event-cel {
+        min-height: 115px;
+        align-items: center;
+    }
+    .img-cel-box {
+        align-items: flex-start;
+        max-height: 240px;
+        width: 100%;
+    }
+    .img-cel-box img {
+        width: 100%;
+    }
+    .event-data {
+        width: 100%;
+    }
+    .event-data h1,
+    .event-data h4 {
+        display: inline;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    .event-data span {
+        margin: 0.7rem  auto 0;
+    }
+    .event-description {
+        text-align: center;
+        width: 85%;
+        margin-bottom: 1rem;
+    }
 }
 @media (min-width: 768px) and (max-width: 991.98px) { 
     .login-wrapper,
@@ -781,8 +945,8 @@ a:hover{ text-decoration: none;}
     .menu-content li a {
         font-size: 0.7rem;
     }
-     .menu-content li:not(:last-child) {
-        padding-right: 0.5rem;
+    .menu-content li:not(:last-child) {
+        padding-right: 0.6rem;
     }
     .menu-content li .btn {
         min-width: 5rem;
@@ -849,6 +1013,51 @@ a:hover{ text-decoration: none;}
     .landing-content .card-content p:last-child {
         margin: 0;
     }
+
+
+    /* ------------- events component */
+    .events-wrapper {
+        min-height: 115vh;
+    }
+    .events-title h2 {
+        color: var(--eighth-color);
+        margin-bottom: 0.8rem;
+        font-size: 2rem;
+    }
+    .events-title h3 {
+        font-weight: 400;
+        margin-bottom: 1.2rem;
+        font-size: 1.3rem;
+    }
+    .event-cel {
+        min-height: 115px;
+        align-items: center;
+    }
+    .img-cel-box {
+        align-items: flex-start;
+        max-height: 240px;
+        width: 100%;
+    }
+    .img-cel-box img {
+        width: 100%;
+    }
+    .event-data {
+        width: 100%;
+    }
+    .event-data h1,
+    .event-data h4 {
+        display: inline;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    .event-data span {
+        margin: 0.7rem  auto 0;
+    }
+    .event-description {
+        text-align: center;
+        width: 85%;
+        margin-bottom: 2.3rem;
+    }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .login-wrapper,
@@ -875,21 +1084,21 @@ a:hover{ text-decoration: none;}
         height: 65vh;
     }
     .banner-content-wrapper {
-        width: 390px;
+        width: 445px;
         height: 390px;
     }
     .banner-content {
-        width: 80%;
+        width: 75%;
     }
     .banner-content h1 {
-        font-size: 1.7rem;
+        font-size: 1.9rem;
     }
     .text-banner-content {
         margin-top: 1rem;
         margin-bottom: 1rem;
     }
     .text-banner-content p {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     .banner-content a {
         font-size: 1.1rem;
@@ -935,6 +1144,17 @@ a:hover{ text-decoration: none;}
     }
     .landing-content .card-content p:last-child {
         margin: 0;
+    }
+
+    /* ------------- events component */
+    .events-wrapper {
+        min-height: 85vh;
+    }
+    .img-cel-box {
+        max-height: 153px;
+    }
+    .img-cel-box img {
+        width: 233px;
     }
 }
 @media (min-width: 1200px) and (max-width: 1439px) {
