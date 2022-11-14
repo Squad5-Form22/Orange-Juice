@@ -118,10 +118,12 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 
 ## Contribuidores
 
-[Cristiano Albino](https://github.com/Kriss-Albius)
+[Cristiano Albino](https://github.com/Kriss-Albius) #developer
 
-[Marcus Mazza](https://github.com/m-mazza)
+[Jacqueline Araujo](https://www.behance.net/Jacawajo) #ux-ui
 
-[Savio Lopes](https://github.com/savio-2-lopes)
+[Marcus Mazza](https://github.com/m-mazza) #developer
 
-[Thalles Sobral](https://github.com/thazsobral)
+[Savio Lopes](https://github.com/savio-2-lopes) #developer
+
+[Thalles Sobral](https://github.com/thazsobral) #developer
