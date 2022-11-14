@@ -193,6 +193,8 @@ a:hover{ text-decoration: none;}
 /* ------------- areas wrappers */
 .login-wrapper,
 .register-wrapper,
+.events-wrapper,
+.user-wrapper,
 .dashboard-wrapper,
 .individual-trail-wrapper {
     display: flex;
@@ -363,10 +365,9 @@ a:hover{ text-decoration: none;}
 }
 
 
-
 /* ------------- dashboard component */
 .dashboard-wrapper {
-    min-height: 90vh;
+    min-height: 80vh;
     background-color: var(--third-color);
 }
 .dashboard-title {
@@ -498,32 +499,6 @@ a:hover{ text-decoration: none;}
 .accordion .card-item:not(:last-child) {
     margin-bottom: 1.3rem;
 }
-.accordion .card-item span:not(.marcacao) {
-    padding: 0rem 0.6rem;
-    min-width: 6rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 2rem;
-    font-size: 0.9rem;
-    line-height: 0;
-    height: 1.5rem;
-    font-weight: 500;
-}
-.accordion .card-item span i {
-    font-size: 1.2rem;
-}
-.accordion .card-item p {
-    margin: 0;
-}
-.accordion .card-item .bdg-video {
-    border: 1px solid var(--fifth-color);
-    color: var(--fifth-color);
-}
-.accordion .card-item .bdg-artigo {
-    border: 1px solid var(--seventh-color);
-    color: var(--seventh-color);
-}
 .accordion .card-title,
 .accordion label {
     margin: 0;
@@ -536,8 +511,66 @@ a:hover{ text-decoration: none;}
 .accordion .card-title form {
    margin-bottom: 0.5rem;
 }
-.accordion .card-title form input[type="checkbox"]{
-    border-radius: 100%;
+
+/*--------------- badge component */
+.bdg {
+    padding: 0rem 0.6rem;
+    min-width: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    line-height: 0;
+    height: 1.5rem;
+    font-weight: 500;
+    max-width: 115px;
+}
+.bdg i {
+    font-size: 1.2rem;
+}
+.bdg p {
+    margin: 0;
+}
+.bdg-video {
+    border: 1px solid var(--fifth-color);
+    color: var(--fifth-color);
+}
+.bdg-artigo,
+.bdg-concurso,
+.bdg-webinar {
+    border: 1px solid var(--seventh-color);
+    color: var(--seventh-color);
+}
+
+/* ------------- events component */
+.events-wrapper {
+    height: 80vh;
+}
+.events-title {
+    text-align: center;
+}
+.events-title::after{
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: gainsboro;
+    display: block;
+}
+.events-title h2 {
+    color: var(--eighth-color);
+    margin-bottom: 1.5rem;
+    font-size: 2.35rem;
+}
+.events-title h3 {
+    font-weight: 400;
+    margin-bottom: 3.2rem;
+}
+
+
+/* ------------- user component */
+.user-wrapper {
+    height: 80vh;
 }
 
 /* ------------- footer component */

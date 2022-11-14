@@ -13,19 +13,19 @@
 @section('navbar')
     {{-- max-width 767.98px --}}
     @section('mobile-menu-content')
-        <li><a href="#">Eventos</a></li>
-        <li><a href="#">Minhas Trilhas</a></li>
-        <li><a href="#r">Comunidade</a></li>
-        <li><a href="#">Minha Conta</a></li>
+        <li><a href="eventos">Eventos</a></li>
+        <li><a href="#">Trilhas</a></li>
+        <li><a href="https://discord.com/invite/NtESsDFGx5" target="_blank">Comunidade</a></li>
+        <li><a href="user">Minha Conta</a></li>
         <li><a href="{{ route('logout') }}" class="log-out">Sair</a></li>
     @endsection
 
     {{-- min-width 768px --}}
     @section('menu-content')
-        <li><a href="#">Eventos</a></li>
-        <li><a href="main-dashboard">Minhas Trilhas</a></li>
-        <li><a href="#r">Comunidade</a></li>
-        <li><a href="#">Minha Conta</a></li>
+        <li><a href="eventos">Eventos</a></li>
+        <li><a href="#">Trilhas</a></li>
+        <li><a href="https://discord.com/invite/NtESsDFGx5" target="_blank">Comunidade</a></li>
+        <li><a href="user">Minha Conta</a></li>
         <li><a href="{{ route('logout') }}" class="log-out">Sair</a></li>
     @endsection
 @endsection
@@ -36,7 +36,6 @@
         <div class="container">
             <div class="row no-gutters align-items-center">
                 <div class="col-lg-4">
-                    {{-- verificar caminho da imagem --}}
                     <img src="../assets/images/trilhas/trilha_{{ $trail['name'] }}.png" class="img-fluid">
                 </div>
                 <div class="col-lg-8">
@@ -64,8 +63,6 @@
                 <div class="col-12">
                     @foreach($topics_contents as $topic)
                     <div class="accordion mb-3" id="accordion{{ $topic['name'] }}">
-                        
-                     
                         <div class="card">
                             <div class="card-header" id="heading{{ $topic['name'] }}">
                                 <div class="mb-0 d-flex align-items-center justify-content-between">
@@ -84,7 +81,7 @@
                                             <a href="https://www.google.com.br/" class="text-dark" target="_blank"><h5>{{$content['name']}}</h5></a>
                                         </label>
                                         <div class="d-flex">                                             
-                                            <span class="bdg-artigo"><i class="las la-book-open"></i> Artigo</span><p class="ml-2">Tema: Migração de Carreira  |  Fonte: Orange Juice  |  Duração: 6 min</p>
+                                            <span class="bdg-artigo bdg"><i class="las la-book-open"></i> Artigo</span><p class="ml-2">Tema: Migração de Carreira  |  Fonte: Orange Juice  |  Duração: 6 min</p>
                                         </div>
                                     </div>
                                     @endforeach              

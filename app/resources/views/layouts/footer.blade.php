@@ -12,31 +12,31 @@
                     <div class="m-3">
                         <ul class="chanels-wrapper">
                             <li>
-                                <a href="" class="d-flex align-items-center">
+                                <a href="https://open.spotify.com/show/5zy6DpF8V3N8rBbWO7OE79" class="d-flex align-items-center">
                                     <img src="../assets/images/icones/icone_spotify.svg" class="icon">
                                     <p class="text-white mb-0">Podcast <strong>Juice Cast</strong></p>
                                 </a>
                             </li>
                             <li>
-                                <a href="" class="d-flex align-items-center">
+                                <a href="https://www.twitch.tv/orangejuice_tech" class="d-flex align-items-center">
                                     <img src="../assets/images/icones/icone_twitch.svg" class="icon">
                                     <p class="text-white mb-0">Bate-papo <strong>Orange Talks</strong></p>
                                 </a>
                             </li>
                             <li>
-                                <a href="" class="d-flex align-items-center">
+                                <a href="https://discord.com/invite/NtESsDFGx5" class="d-flex align-items-center" target="_blank">
                                     <img src="../assets/images/icones/icone_discord.svg" class="icon">
                                     <p class="text-white mb-0">Comunidade <strong>Orange Juice</strong></p>
                                 </a>
                             </li>
                             <li>
-                                <a href="" class="d-flex align-items-center">
+                                <a href="https://www.youtube.com/orangejuicefc" class="d-flex align-items-center" target="_blank">
                                     <img src="../assets/images/icones/icone_youtube.svg" class="icon">
                                     <p class="text-white mb-0">Canal <strong>Orange</strong></p>
                                 </a>
                             </li>
                             <li>
-                                <a href="" class="d-flex align-items-center">
+                                <a href="https://medium.com/orangejuicefc" class="d-flex align-items-center" target="_blank">
                                     <img src="../assets/images/icones/icone_medium.svg" class="icon">
                                     <p class="text-white mb-0"><strong>Orange</strong> Medium</p>
                                 </a>

@@ -24,6 +24,14 @@ Route::get('/', function () {
     return view('landing_page');
 });
 
+Route::get('/eventos', function() {
+    return view('eventos');
+});
+
+Route::get('/user', function() {
+    return view('user');
+});
+
 // Route::group(['middleware' => 'isAdmin'], function () {
 //     Route::get('/admin/dashboard', DashboardAdmin::class)->name('admin.dashboard');
 //     Route::post('/logout', [loginController::class, 'logout'])->name('logout');
@@ -46,3 +54,4 @@ Route::group(['middleware' => 'guest'], function () {
     Route::post('/login', [LoginController::class, 'signin'])->name('login');
     Route::get('/login', [LoginController::class, 'login'])->name('login.form');
 });
+
