@@ -14,7 +14,7 @@
     {{-- max-width 767.98px --}}
     @section('mobile-menu-content')
         <li><a href="eventos">Eventos</a></li>
-        <li><a href="#">Trilhas</a></li>
+        <li><a href="{{ route('dashboard') }}">Trilhas</a></li>
         <li><a href="https://discord.com/invite/NtESsDFGx5" target="_blank">Comunidade</a></li>
         <li><a href="user">Minha Conta</a></li>
         <li><a href="{{ route('logout') }}" class="log-out">Sair</a></li>
@@ -23,7 +23,7 @@
     {{-- min-width 768px --}}
     @section('menu-content')
         <li><a href="eventos">Eventos</a></li>
-        <li><a href="#">Trilhas</a></li>
+        <li><a href="{{ route('dashboard') }}">Trilhas</a></li>
         <li><a href="https://discord.com/invite/NtESsDFGx5" target="_blank">Comunidade</a></li>
         <li><a href="user">Minha Conta</a></li>
         <li><a href="{{ route('logout') }}" class="log-out">Sair</a></li>
@@ -56,7 +56,7 @@
                 <div class="col-12">
                     <div class="intro-text">
                         <h3>Se você chegou até aqui, é porque quer aprender mais sobre tecnologia, especialmente sobre <strong>{{ $trail['name'] }}</strong>!</h3>
-                        <p>Essa trilha foi montada pensando em quem está começando na área, ou passando por uma migração de carreira e ainda não sabe exatamente o que é esse mundo. Então, aperta o cinto e vem com a gente nessa jornada!</p>
+                        <p>{{ $trail['description'] }}</p>
                     </div>
                 </div>
 
@@ -81,7 +81,7 @@
                                             <a href="https://www.google.com.br/" class="text-dark" target="_blank"><h5>{{$content['name']}}</h5></a>
                                         </label>
                                         <div class="d-flex">                                             
-                                            <span class="bdg-artigo bdg"><i class="las la-book-open"></i> Artigo</span><p class="ml-2">Tema: Migração de Carreira  |  Fonte: Orange Juice  |  Duração: 6 min</p>
+                                            <span class="bdg-artigo bdg"><i class="las la-book-open"></i> {{ $content['type']}}</span><p class="ml-2">Tema: {{ $content['theme'] }}  |  Fonte: {{ $content['author'] }}  |  Duração: {{ $content['duration'] }}</p>
                                         </div>
                                     </div>
                                     @endforeach              
