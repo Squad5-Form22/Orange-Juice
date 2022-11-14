@@ -36,7 +36,7 @@
         <div class="container">
             <div class="row no-gutters align-items-center">
                 <div class="col-lg-4">
-                    <img src="../assets/images/trilhas/trilha_{{ $trail['name'] }}.png" class="img-fluid">
+                    <img src="../assets/images/trilhas/trilha_{{ $trail['image_name'] }}.png" class="img-fluid">
                 </div>
                 <div class="col-lg-8">
                     <div class="m-3">

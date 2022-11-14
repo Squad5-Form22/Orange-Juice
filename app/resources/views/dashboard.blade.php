@@ -48,7 +48,7 @@
                         <div class="m-3">
                             <a href="/trail/{{ $trail->id }}">
                                 <div class="trail-card-wrapper">
-                                    <img src="assets/images/trilhas/trilha_{{ $trail->name }}.png">
+                                    <img src="assets/images/trilhas/trilha_{{ $trail['image_name'] }}.png">
                                     <div class="trail-content-wrapper">
                                         <h4>{{ $trail->name }}</h4>
                                     </div>
