@@ -21,7 +21,6 @@ class RegisterController extends Controller
         ]);
         
         $dados = $request->only(['name', 'email', 'password']);
-        $dados['password'] = Hash::make($dados['password']);
  
         User::saveOne($dados);
 

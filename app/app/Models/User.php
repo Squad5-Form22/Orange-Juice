@@ -64,7 +64,18 @@ class User extends Authenticatable
     }
 
     static function saveOne($data){
+        $data['password'] = Hash::make($data['password']);
         $result = User::create($data);
+        return $result;
+    }
+
+    static function updateOne($data, $id = null) {
+        $user = User::findOrFail($id);
+        if($data['password']) {
+            $result = $user->password = Hash::make($data['password']);
+        } else {
+            $result = $user->update($data);
+        }
         return $result;
     }
 
