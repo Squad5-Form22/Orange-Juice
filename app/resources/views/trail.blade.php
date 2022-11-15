@@ -70,9 +70,11 @@
                     </div>
                 </div>
                 <div class="col-12 mb-5">
+                    @if($user['role'] === 'admin')
                     <div class="d-flex justify-content-end">
                         <a href="from" class="btn edit-btn"><i class="las la-edit"></i> Editar</a>
                     </div>
+                    @endif
                 </div>
                 <div class="col-12">
                     @foreach($topics_contents as $topic)
@@ -82,10 +84,10 @@
                                 <div class="mb-0 d-flex align-items-center justify-content-between">
                                     <h4 class="d-inline mb-0"><strong>{{ $topic['name'] }}</strong></h4>
                                     <div class="w-25 d-flex align-items-center justify-content-end">       
-
+                                        @if($user['role'] === 'admin')
                                         <span class="edit"><a href=""><i class="las la-edit"></i> Editar</a></span>                       
                                         <span class="trash"><a href=""><i class="las la-trash-alt"></i> Deletar</a></span>
-                            
+                                        @endif
                                         <button class="btn" type="button" data-toggle="collapse" data-target="#collapse{{ $topic['id'] }}" aria-expanded="true" aria-controls="collapse{{ $topic['id'] }}">
                                             <i class="fas fa-chevron-right"></i>
                                         </button>
@@ -104,11 +106,13 @@
                                         <div class="d-flex align-items-center justify-content-between">           
                                             <div class="d-flex" style="width:85%">                     
                                                 <span class="bdg-artigo bdg"><i class="las la-book-open"></i> {{ $content['type']}}</span><p class="ml-2">Tema: {{ $content['theme'] }}  |  Fonte: {{ $content['author'] }}  |  Duração: {{ $content['duration'] }}</p>
-                                            </div>     
+                                            </div> 
+                                            @if($user['role'] === 'admin')    
                                             <div>       
                                                 <span class="edit"><a href=""><i class="las la-edit"></i></a></span>                       
                                                 <span class="trash"><a href=""><i class="las la-trash-alt"></i></a></span>
                                             </div> 
+                                            @endif
                                         </div>
                                     </div>
                                     @endforeach              
@@ -119,9 +123,11 @@
                     @endforeach
                 </div>
                 <div class="col-12 mt-5">
+                    @if($user['role'] === 'admin')
                     <div class="d-flex justify-content-start">
                         <a href="from" class="btn edit-btn d-flex align-items-center justify-conten-between"><i class="las la-plus-square"></i> Novo</a>
                     </div>
+                    @endif
                 </div>
             </div>
         </div>
