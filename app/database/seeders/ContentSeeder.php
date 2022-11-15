@@ -74,7 +74,7 @@ class ContentSeeder extends Seeder
                 'name' => 'Docker',
                 'author' => 'Vitor B.',
                 'url' => 'https://google.com.br',
-                'type' => '',
+                'type' => 'video',
                 'topic_id' => 3,
                 'theme' => 'Desenvolvimento',
                 'duration' => '01:10:00'
@@ -83,7 +83,7 @@ class ContentSeeder extends Seeder
                 'name' => 'AWS',
                 'author' => 'Marina S.',
                 'url' => 'https://google.com.br',
-                'type' => '',
+                'type' => 'curso',
                 'topic_id' => 3,
                 'theme' => 'Desenvolvimento',
                 'duration' => '01:00:00'
