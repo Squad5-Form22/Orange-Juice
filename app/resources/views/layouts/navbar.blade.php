@@ -12,7 +12,7 @@
                     {{-- Marca --}}
                     <div class="mobile-menu-brand">
                         <a href="{{ route('dashboard') }}">
-                            <img src="/assets/images/logotipo/logo-orange.png" class="img-fluid" style="width: 60px;">
+                            <img src="/assets/images/logotipo/logo-orange.png" class="img-fluid">
                         </a>
                     </div>
                     {{-- texto --}}
