@@ -10,10 +10,10 @@
     {{-- max-width 767.98px --}}
     @section('mobile-menu-content')
     <div class="mobile-navigation">
-        <li><a href="">Trilhas de Conhecimento</a></li>
-        <li><a href="">Comunidade</a></li>
-        <li><a href="">Eventos</a></li>
-        <li><a href="">Sobre a Orange Juice</a></li>
+        <li><a href="register">Trilhas de Conhecimento</a></li>
+        <li><a href="https://discord.com/invite/NtESsDFGx5" target="_blank">Comunidade</a></li>
+        <li><a href="eventos">Eventos</a></li>
+        <li><a href="https://digital.fcamara.com.br/orangejuice" target="_blank">Sobre a Orange Juice</a></li>
     </div>
     <div class="d-flex align-items-center justify-content-between">
         <li><a href="login" class="btn btn-outline-primary">Login</a></li>
@@ -23,10 +23,10 @@
 
     {{-- min-width 768px --}}
     @section('menu-content')
-        <li><a href="">Trilhas de Conhecimento</a></li>
-        <li><a href="">Comunidade</a></li>
-        <li><a href="">Eventos</a></li>
-        <li><a href="">Sobre a Orange Juice</a></li>
+        <li><a href="register">Trilhas de Conhecimento</a></li>
+        <li><a href="https://discord.com/invite/NtESsDFGx5" target="_blank">Comunidade</a></li>
+        <li><a href="eventos">Eventos</a></li>
+        <li><a href="https://digital.fcamara.com.br/orangejuice" target="_blank">Sobre a Orange Juice</a></li>
         <li><a href="login" class="btn btn-outline-primary">Login</a></li>
         <li><a href="register" class="btn btn-primary">cadastre-se</a></li>
     @endsection
@@ -67,7 +67,7 @@
                           <div class="col-md-5">
                             <div class="img-card">
                                 <img src="assets/images/institucional/banner-trilhas.png" class="img-fluid">
-                                <a href="" class="btn btn-secondary">Iniciar Trilha</a>
+                                <a href="register" class="btn btn-secondary">Iniciar Trilha</a>
                             </div>
                           </div>
                         </div>
@@ -94,7 +94,7 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <div class="card portfólio-color">
+                    <div class="card portfolio-color">
                         <div class="card-wrapper no-gutters">
                           <div class="col-md-7">
                             <div class="card-body">

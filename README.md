@@ -18,6 +18,7 @@
 
 ## Tópicos
 * [Descrição do Projeto](#descrição-do-projeto)
+* [Protótipo do Projeto](#protótipo)
 * [Ferramentas e Tecnologias](#ferramentas-e-tecnologias)
 * [Como executar o projeto](#como-executar)
 * [Contribuidores](#contribuidores)
@@ -30,8 +31,12 @@ Projeto em desenvolvimento durante o Programa de Formação 2022 do [Grupo FCama
 
 <br>
 
+## Protótipo
+
+* [Figma](https://www.figma.com/proto/8sK65JAHvYkAq6TuEZAdTX/Squad-5---Orange-Juice?node-id=3%3A2&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=3%3A2)
 ## Ferramentas e Tecnologias
 
+* [Figma](https://www.figma.com/)
 * [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 * [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 * [Bootstrap](https://getbootstrap.com/)
@@ -44,69 +49,81 @@ Projeto em desenvolvimento durante o Programa de Formação 2022 do [Grupo FCama
 
 ## Como executar
 
-#### Pré-requisitos
+### Pré-requisitos
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas: [Docker](https://www.docker.com/).
 
 <br>
 
 ### Rodando a aplicação web 
 
-Primeiro clone o repositório: 
+1. Primeiro, clone o repositório: 
 
-```git clone https://github.com/Squad5-Form22/Orange-Juice.git```
-ou 
-```git clone git@github.com:Squad5-Form22/Orange-Juice.git```
+    ```git clone https://github.com/Squad5-Form22/Orange-Juice.git```
 
-Acesse a pasta do repositório e realize o build do container: 
+    ou
 
-```cd Orange-Juice```
+    ```git clone git@github.com:Squad5-Form22/Orange-Juice.git```
 
-```docker compose up --build```
+2. Acesse a pasta do repositório e realize o build do container: 
 
-Em outro terminal, no mesmo diretório, entre no Docker com este comando
+    ```cd Orange-Juice```
 
-```docker exec -it php-apache bash```
+3. Na pasta **app/** renomeie o arquivo **.env.example** para **.env**
 
-No container, instale as dependência
+4. No arquivo **.env**, atualize as seguintes variáveis para os dados abaixo:
 
-```composer update```
+    ```
+    DB_CONNECTION=mysql
+    DB_HOST=db
+    DB_PORT=3306
+    DB_DATABASE=DB_LARAVEL
+    DB_USERNAME=root
+    DB_PASSWORD=MYSQL_ROOT_PASSWORD
+    ```
 
-  >Caso o Git em seu computador esteja configurado para SSH, deve-se [cadastrar um token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) para realizar o update
+5. Construa os containers para executar sua aplicação.
 
-Na pasta app/ renomeie o arquivo .env.example para .env
+    ```docker compose up --build```
 
-Dentro da pasta app/, no .env, atualize as seguintes variáveis para os dados abaixo:
+    > No linux, se já tiver instalado o Docker, pode ser necessário executar o seguinte comando, ```chmod -R 777 /var/www/php/```
 
-```
-DB_CONNECTION=mysql
-DB_HOST=db
-DB_PORT=3306
-DB_DATABASE=DB_LARAVEL
-DB_USERNAME=root
-DB_PASSWORD=MYSQL_ROOT_PASSWORD
-```
+6. Em outro terminal, no mesmo diretório, acesse o container do servidor apache com o bash
 
-Após isto, volte para dentro do container Docker e rode as migrations para adicionar as tabelas padrões ao banco de dados
+    ```docker exec -it php-apache bash```
 
-```php artisan key:generate```
+7. Dê permissão de gravação na pasta `/var/www/php` dentro do servidor apache
 
-```php artisan migrate```
+    ```chmod -R 777 /var/www/php/```
 
-Para limpar as migrations, rode:
+8. Instale as dependência
 
-```php artisan migrate:rollback```
+    ```composer update```
 
-Se tudo estiver correto, a aplicação estará rodando em:
-```http://localhost:8000```
+9. Gere uma `APP_KEY` para sua aplicação
+
+    ```php artisan key:generate```
+
+    > Caso o Git em seu computador esteja configurado para SSH, deve-se [cadastrar um token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) para realizar o update
+
+10. Após finalizar, rode as migrations para adicionar as tabelas padrões ao banco de dados
+
+    ```php artisan migrate```
+
+    > Se quiser rodar as seeds do projeto execute o seguinte comando, ```php artisan db:seed```
+
+11. Se tudo estiver correto, a aplicação estará rodando em:
+```http://localhost:8000/```
 
 <br>
 
 ## Contribuidores
 
-[Cristiano Albino](https://github.com/Kriss-Albius)
+[Cristiano Albino](https://github.com/Kriss-Albius) #developer
 
-[Marcus Mazza](https://github.com/m-mazza)
+[Jacqueline Araujo](https://www.behance.net/Jacawajo) #ux-ui
 
-[Savio Lopes](https://github.com/savio-2-lopes)
+[Marcus Mazza](https://github.com/m-mazza) #developer
 
-[Thalles Sobral](https://github.com/thazsobral)
+[Savio Lopes](https://github.com/savio-2-lopes) #developer
+
+[Thalles Sobral](https://github.com/thazsobral) #developer

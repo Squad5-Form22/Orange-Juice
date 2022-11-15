@@ -16,8 +16,9 @@ return new class extends Migration
         Schema::dropIfExists('trails');
         Schema::create('trails', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('image_name');
             $table->string('name')->unique();
-            $table->string('description', 200);
+            $table->text('description', 200);
             $table->boolean('status')->default(true);
             $table->timestamps();
         });

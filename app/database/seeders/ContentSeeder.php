@@ -18,58 +18,193 @@ class ContentSeeder extends Seeder
         $contents = [
             [
                 'name' => 'LinkedIn',
-                'author' => 'fulano',
-                'url' => 'https://google.com',
-                'type' => 'video', 
-                'topic_id' => rand(1,5),
-                'theme' => 'Migração de Carreira',
-                'duration' => '00:00:05'
+                'author' => 'Luiza S.',
+                'url' => 'https://google.com.br',
+                'type' => 'artigo', 
+                'topic_id' => 1,
+                'theme' => 'Soft Skill',
+                'duration' => '00:50:00'
             ],
             [
-                'name' => 'curriculo matador',
-                'author' => 'fulano',
-                'url' => 'https://google.com',
-                'type' => 'video',
-                'topic_id' => rand(1,5),
-                'theme' => 'Migração de Carreira',
+                'name' => 'Comunição',
+                'author' => 'Carla Figueiredo',
+                'url' => 'https://google.com.br',
+                'type' => 'vídeo',
+                'topic_id' => 1,
+                'theme' => 'Soft Skill',
                 'duration' => '00:20:00'
             ],
             [
-                'name' => 'HTML',
-                'author' => 'fulano',
-                'url' => 'https://google.com',
-                'type' => 'video',
-                'topic_id' => rand(1,5),
-                'theme' => 'Desenvolvimento',
-                'duration' => '00:40:35'
+                'name' => 'Gestão de tempo',
+                'author' => 'Juju B.',
+                'url' => 'https://google.com.br',
+                'type' => 'artigo',
+                'topic_id' => 1,
+                'theme' => 'Soft Skill',
+                'duration' => '00:50:00'
             ],
             [
-                'name' => 'CSS',
-                'author' => 'fulano',
-                'url' => 'https://google.com',
-                'type' => 'video',
-                'topic_id' => rand(1,5),
+                'name' => 'HTML5',
+                'author' => 'Vitor B.',
+                'url' => 'https://google.com.br',
+                'type' => 'vídeo',
+                'topic_id' => 2,
                 'theme' => 'Desenvolvimento',
                 'duration' => '02:00:00'
             ],
             [
-                'name' => 'PHP',
-                'author' => 'fulano',
-                'url' => 'https://google.com',
+                'name' => 'CSS3',
+                'author' => 'Vitor B.',
+                'url' => 'https://google.com.br',
+                'type' => 'vídeo',
+                'topic_id' => 2,
+                'theme' => 'Desenvolvimento',
+                'duration' => '00:50:00'
+            ],
+            [
+                'name' => 'JS6',
+                'author' => 'Marina S.',
+                'url' => 'https://google.com.br',
+                'type' => 'vídeo',
+                'topic_id' => 2,
+                'theme' => 'Desenvolvimento',
+                'duration' => '01:30:00'
+            ],
+            [
+                'name' => 'Docker',
+                'author' => 'Vitor B.',
+                'url' => 'https://google.com.br',
                 'type' => 'video',
-                'topic_id' => rand(1,5),
-                'theme' => 'Desenlvimento',
+                'topic_id' => 3,
+                'theme' => 'Desenvolvimento',
+                'duration' => '01:10:00'
+            ],
+            [
+                'name' => 'AWS',
+                'author' => 'Marina S.',
+                'url' => 'https://google.com.br',
+                'type' => 'curso',
+                'topic_id' => 3,
+                'theme' => 'Desenvolvimento',
                 'duration' => '01:00:00'
             ],
             [
+                'name' => 'Estrutura de dados',
+                'author' => 'Marina S.',
+                'url' => 'https://google.com.br',
+                'type' => 'vídeo',
+                'topic_id' => 3,
+                'theme' => 'Desenvolvimento',
+                'duration' => '00:55:00'
+            ],
+            [
+                'name' => 'Estrevista com Stackholder',
+                'author' => 'Julia Figueiredo',
+                'url' => 'https://google.com.br',
+                'type' => 'vídeo',
+                'topic_id' => 4,
+                'theme' => 'Projeto',
+                'duration' => '00:30:00'
+            ],
+            [
+                'name' => 'Matriz CSD',
+                'author' => 'Carla Figueiredo',
+                'url' => 'https://google.com.br',
+                'type' => 'artigo',
+                'topic_id' => 4,
+                'theme' => 'Projeto',
+                'duration' => '00:40:00'
+            ],
+            [
+                'name' => 'Benchmark',
+                'author' => 'Carla Figueiredo',
+                'url' => 'https://google.com.br',
+                'type' => 'artigo',
+                'topic_id' => 4,
+                'theme' => 'Projeto',
+                'duration' => '00:50:00'
+            ],
+            [
                 'name' => 'Figma',
-                'author' => 'fulano',
-                'url' => 'https://google.com',
-                'type' => 'video',
-                'topic_id' => rand(1,5),
-                'theme' => 'UX Desing',
-                'duration' => '01:30:00'
-            ]
+                'author' => 'Lais F.',
+                'url' => 'https://google.com.br',
+                'type' => 'curso',
+                'topic_id' => 5,
+                'theme' => 'Projeto',
+                'duration' => '01:00:00'
+            ],
+            [
+                'name' => 'Miro',
+                'author' => 'Lais F.',
+                'url' => 'https://google.com.br',
+                'type' => 'curso',
+                'topic_id' => 5,
+                'theme' => 'Projeto',
+                'duration' => '01:00:00'
+            ],
+            [
+                'name' => 'Canva',
+                'author' => 'Pedro Cavalcante',
+                'url' => 'https://google.com.br',
+                'type' => 'curso',
+                'topic_id' => 5,
+                'theme' => 'Projeto',
+                'duration' => '00:35:00'
+            ],
+            [
+                'name' => 'Testes Unitários',
+                'author' => 'João L.',
+                'url' => 'https://google.com.br',
+                'type' => 'artigo',
+                'topic_id' => 6,
+                'theme' => 'Desenvolvimento',
+                'duration' => '00:40:00'
+            ],
+            [
+                'name' => 'TDD',
+                'author' => 'Victor H.',
+                'url' => 'https://google.com.br',
+                'type' => 'vídeo',
+                'topic_id' => 6,
+                'theme' => 'Desenvolvimento',
+                'duration' => '01:05:00'
+            ],
+            [
+                'name' => 'Metodologia Ágil',
+                'author' => 'Carla Figueiredo',
+                'url' => 'https://google.com.br',
+                'type' => 'artigo',
+                'topic_id' => 6,
+                'theme' => 'Projeto',
+                'duration' => '00:15:00'
+            ],
+            [
+                'name' => 'Scrum',
+                'author' => 'Marcos Rogério',
+                'url' => 'https://google.com.br',
+                'type' => 'vídeo',
+                'topic_id' => 7,
+                'theme' => 'Projeto',
+                'duration' => '01:20:00'
+            ],
+            [
+                'name' => 'Kanban',
+                'author' => 'Lucas P.',
+                'url' => 'https://google.com.br',
+                'type' => 'artigo',
+                'topic_id' => 7,
+                'theme' => 'Projeto',
+                'duration' => '00:30:00'
+            ],
+            [
+                'name' => 'Grafana',
+                'author' => 'Marcos Rogério',
+                'url' => 'https://google.com.br',
+                'type' => 'vídeo',
+                'topic_id' => 7,
+                'theme' => 'Desenvolvimento',
+                'duration' => '01:00:00'
+            ],
         ];
 
         foreach($contents as $content) {

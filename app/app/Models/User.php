@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Hash;
 use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
@@ -50,5 +51,36 @@ class User extends Authenticatable
             'user_id',
             'content_id',
         );
+    }
+
+    static function getAll(){
+        $data = User::get();
+        return $data;
+    }
+
+    static function getOne($id){
+        $data = User::where('id',$id)->get();
+        return $data;
+    }
+
+    static function saveOne($data){
+        $data['password'] = Hash::make($data['password']);
+        $result = User::create($data);
+        return $result;
+    }
+
+    static function updateOne($data, $id = null) {
+        $user = User::findOrFail($id);
+        if($data['password']) {
+            $result = $user->password = Hash::make($data['password']);
+        } else {
+            $result = $user->update($data);
+        }
+        return $result;
+    }
+
+    static function deleteOne($id){
+        $result = User::where('id',$id)->delete();
+        return $result;
     }
 }
