@@ -1,13 +1,13 @@
-@section('titulo') Login - Orange Juice @endsection
+@section('titulo') Nova Senha - Orange Juice @endsection
 
 @extends('layouts/layout')
 
 @section('conteudo')
-    <div class="login-wrapper">
+    <div class="redefinir-wrapper">
         <div class="container">
             <div class="row no-gutters justify-content-center">
                 <div class="col-12 col-md-10 col-lg-6">
-                    <div class="login-content-wrapper bg-light">
+                    <div class="redfinir-content-wrapper bg-light">
                         <div>
                             <div class="mb-3 d-flex justify-content-center">
                                 <a href="./">
@@ -37,21 +37,13 @@
                                 @enderror
                             </div>
                             <div class="form-content-wrapper">
-                                <form id="login-form" method="POST" action="{{ route('login') }}">
+                                <form id="redefinir-form" method="POST" action="{{ route('login') }}">
                                     @csrf
                                     <div class="row no-gutters justify-content-between align-items-center">
                                         <div class="col-12 col-md-12">
                                             <div class="m-1">
                                                 <div class="form-group">
-                                                    <label for="email"><strong>E-mail</strong></label>
-                                                    <input type="email" class="form-control @error('email') is-inv @enderror" data-name="E-mail" name="email" value="{{ old('email') }}" placeholder="Digite seu e-mail">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-md-12">
-                                            <div class="m-1">
-                                                <div class="form-group">
-                                                    <label for="password"><strong>Senha</strong></label>
+                                                    <label for="password"><strong>Nova Senha</strong></label>
                                                     <input type="password" class="form-control @error('password') is-inv @enderror" data-name="Senha" name="password" value="{{ old('password') }}" placeholder="Crie sua Senha">
                                                     <i class="fas fa-eye"></i>
                                                 </div>
@@ -59,7 +51,16 @@
                                         </div>
                                         <div class="col-12 col-md-12">
                                             <div class="m-1">
-                                                <button type="submit" class="btn btn-primary w-100">Entrar</button>
+                                                <div class="form-group">
+                                                    <label for="password"><strong>Confirme sua Nova Senha</strong></label>
+                                                    <input type="password" class="form-control @error('password') is-inv @enderror" data-name="Senha" name="password" value="{{ old('password') }}" placeholder="Crie sua Senha">
+                                                    <i class="fas fa-eye"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-12">
+                                            <div class="m-1">
+                                                <button type="submit" class="btn btn-primary w-100">Registre-se</button>
                                             </div>
                                         </div>
                                     </div>
@@ -67,8 +68,7 @@
                             </div>
                             <div class="mt-3 d-flex justify-content-center">
                                 <div>
-                                    <p class="mb-3"><a class="link-bl" href="redefinir">Esqueci minha senha</a></p>
-                                    <p class="mb-0"><a class="link-bl" href="register">Ainda não tenho conta</a></p>
+                                    <p class="mb-3"><a class="link-bl" href="register">Faça seu login</a></p>
                                 </div>
                             </div>
                         </div>

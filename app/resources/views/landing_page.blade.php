@@ -94,7 +94,7 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <div class="card portfólio-color">
+                    <div class="card portfolio-color">
                         <div class="card-wrapper no-gutters">
                           <div class="col-md-7">
                             <div class="card-body">

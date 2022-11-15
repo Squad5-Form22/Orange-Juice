@@ -7,7 +7,7 @@
 @extends('layouts/navbar')
 
 {{-- titulo da página --}}
-@section('titulo') Trilha - Orange Juice @endsection
+@section('titulo') Home - Orange Juice @endsection
 
 {{-- conteúdo menu --}}
 @section('navbar')
@@ -72,11 +72,8 @@
                         <p>Essa trilha foi montada pensando em quem está começando na área, ou passando por uma migração de carreira e ainda não sabe exatamente o que é esse mundo. Então, aperta o cinto e vem com a gente nessa jornada!</p>
                     </div>
                 </div>
-                <div class="col-12 mb-5">
-                    <div class="d-flex justify-content-end">
-                        <a href="from" class="btn edit-btn"><i class="las la-edit"></i> Editar</a>
-                    </div>
-                </div>
+    
+
                 <div class="col-12">
                     @foreach($topics_contents as $topic)
                     <div class="accordion mb-3" id="accordion{{ $topic['name'] }}">
@@ -84,17 +81,9 @@
                             <div class="card-header" id="heading{{ $topic['name'] }}">
                                 <div class="mb-0 d-flex align-items-center justify-content-between">
                                     <h4 class="d-inline mb-0"><strong>{{ $topic['name'] }}</strong></h4>
-
-                                    <div class="w-25 d-flex align-items-center justify-content-end">       
-
-                                        <span class="edit"><a href=""><i class="las la-edit"></i> Editar</a></span>                       
-                                        <span class="trash"><a href=""><i class="las la-trash-alt"></i> Deletar</a></span>
-                            
-                                        <button class="btn" type="button" data-toggle="collapse" data-target="#collapse{{ $topic['name'] }}" aria-expanded="true" aria-controls="collapse{{ $topic['name'] }}">
-                                            <i class="fas fa-chevron-right"></i>
-                                        </button>
-                                    </div>
-
+                                    <button class="btn" type="button" data-toggle="collapse" data-target="#collapse{{ $topic['name'] }}" aria-expanded="true" aria-controls="collapse{{ $topic['name'] }}">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </button>
                                 </div>
                             </div>
                             <div id="collapse{{ $topic['name'] }}" class="collapse" aria-labelledby="heading{{ $topic['name'] }}" data-parent="#accordion{{ $topic['name'] }}">
@@ -102,19 +91,12 @@
                                     @foreach($topic['contents'] as $content)
                                     <div class="card-item">
                                         <label class="card-title">
-                                            <input id="{{ $content['id'] }}" type="checkbox" class="mt-1 mr-2" @if(in_array($content['id'], $completed_contents_id)) checked @endif value="{{$content['status']}}" >
+                                            <input id="{{ $content['id'] }}" type="checkbox" class="mr-2" @if(in_array($content['id'], $completed_contents_id)) checked @endif value="{{$content['status']}}" >
                                             <a href="https://www.google.com.br/" class="text-dark" target="_blank"><h5>{{$content['name']}}</h5></a>
                                         </label>
-                                        <div class="d-flex align-items-center justify-content-between">           
-                                            <div class="d-flex" style="width:85%">                     
-                                                <span class="bdg-artigo bdg"><i class="las la-book-open"></i> Artigo</span><p class="mx-2">Tema: Migração de Carreira  |  Fonte: Orange Juice  |  Duração: 6 min</p>     
-                                            </div>     
-                                            <div>       
-                                                <span class="edit"><a href=""><i class="las la-edit"></i></a></span>                       
-                                                <span class="trash"><a href=""><i class="las la-trash-alt"></i></a></span>
-                                            </div> 
+                                        <div class="d-flex">                                             
+                                            <span class="bdg-artigo bdg"><i class="las la-book-open"></i> Artigo</span><p class="ml-2">Tema: Migração de Carreira  |  Fonte: Orange Juice  |  Duração: 6 min</p>
                                         </div>
-                                    
                                     </div>
                                     @endforeach              
                                 </div>
@@ -122,11 +104,6 @@
                         </div>
                     </div>
                     @endforeach
-                </div>
-                <div class="col-12 mt-5">
-                    <div class="d-flex justify-content-start">
-                        <a href="from" class="btn edit-btn d-flex align-items-center justify-conten-between"><i class="las la-plus-square"></i> Novo</a>
-                    </div>
                 </div>
             </div>
         </div>

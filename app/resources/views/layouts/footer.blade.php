@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row no-gutters justify-content-center">
             <div class="col-12 d-flex">
-                <div class="mx-auto d-flex">
+                <div class="mx-auto d-flex flex-column flex-sm-row">
                     <div class="m-3 text-center">
                         <img class="logo-footer"src="../assets/images/logotipo/logo-orange-juice.svg">
                         <p class="mb-0 text-white">Fique por dentro das últimas</p>
