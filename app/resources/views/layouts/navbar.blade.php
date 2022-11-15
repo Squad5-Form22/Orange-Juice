@@ -11,7 +11,7 @@
                     </div>
                     {{-- Marca --}}
                     <div class="mobile-menu-brand">
-                        <a href="./">
+                        <a href="{{ route('dashboard') }}">
                             <img src="/assets/images/logotipo/logo-orange.png" class="img-fluid">
                         </a>
                     </div>
@@ -34,7 +34,7 @@
     <div class="container">
         <div class="menu-wrapper">
             <div class="brand-wrapper">
-                <a href="./">
+                <a href="{{ route('dashboard') }}">
                     <img src="/assets/images/logotipo/logo-orange.png" class="img-fluid" style="width: 60px;">
                 </a>
             </div>

@@ -17,22 +17,25 @@ class TopicSeeder extends Seeder
     {
         $topics = [
                 [
-                    'name' => 'inicio',
+                    'name' => 'Básico',
                 ],
                 [
-                    'name' => 'basico',
+                    'name' => 'Básico de desenvolvimento',
                 ],
                 [
-                    'name' => 'basico developer',
+                    'name' => 'Avançando no desenvolvimento',
                 ],
                 [
-                    'name' => 'intermediario developer',
+                    'name' => 'Básico de UX',
                 ],
                 [
-                    'name' => 'basico ux',
+                    'name' => 'Opcionais de UX',
                 ],
                 [
-                    'name' => 'avançado qa',
+                    'name' => 'Básico de QA',
+                ],
+                [
+                    'name' => 'Avançando no QA',
                 ],
         ];
 
